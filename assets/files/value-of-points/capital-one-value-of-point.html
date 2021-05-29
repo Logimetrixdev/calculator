@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="fr" class="loap">
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"01f43ed725",applicationID:"11263150"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1198.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>  <title>Page not found</title>
+  <meta name="description" content="">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=A079kwKzvM">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=A079kwKzvM">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=A079kwKzvM">
+  <link rel="manifest" href="/site.webmanifest?v=A079kwKzvM">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=A079kwKzvM" color="#000000">
+  <link rel="shortcut icon" href="/favicon.ico?v=A079kwKzvM">
+  <meta name="apple-mobile-web-app-title" content="Ratehub.ca">
+  <meta name="application-name" content="Ratehub.ca">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="/assets/css/app.css?v=77e67283">
+  <!--[if IE 8]>
+    <script src="/assets/js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/fallbacks-ie8.css">
+    <script src="/assets/js/respond.js"></script>
+  <![endif]-->
+  </head>
+  <body ng-app="ratehub" class="rh normal">
+      <script>
+var _vwo_code=(function(){ var account_id=313142, settings_tolerance=3000, library_tolerance=3500, use_existing_jquery=true, f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();var _vis_opt_queue=window._vis_opt_queue||[],_vis_counter=0;_vis_opt_queue.push(function(){try{if(!_vis_counter){for(var _,o,e={},i=0;i<_vwo_exp_ids.length;i++)o=_vwo_exp_ids[i],_vwo_exp[o].ready&&(_=_vis_opt_readCookie("_vis_opt_exp_"+o+"_combi"),void 0!==_vwo_exp[o].combination_chosen&&(_=_vwo_exp[o].combination_chosen),void 0!==_vwo_exp[o].comb_n[_]&&(e["VWO-Test-ID-"+o]=_vwo_exp[o].comb_n[_],_vis_counter++));_vis_counter&&heap.addUserProperties(e)}}catch(_){}});      </script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN8QRHD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <svg class="sprite-sheet" style="position: absolute; width: 0; height: 0;">
+  </svg>
+  <header>
+    <!-- Optional leaderboard -->
+      <div class="leaderboard">
+        <div id="leaderboard-1"></div>
+      </div>
+    <!-- Topbar -->
+      <div id="topbar">
+        <div><div id="nav_header">
+          <a id="nav_mobile" class="menu">
+            <i class="fa fa-fw fa-bars"></i>
+          </a>
+          <div id="nav_mobile_active"></div>
+          <a id="nav_logo" href="/comparez">
+            <span class="rh-offscreen">ratehub</span>
+          </a>
+        </div><div id="nav_main">
+          <nav>
+  <ul class="menu desktop">
+<li data-url="/hypotheque">
+      <a href="/hypotheque">
+        <i class="fa fa-fw fa-home"></i>
+      <span>Hypothèques</span>
+        <i class="fa fa-fw submenu-indicator"></i>
+      </a>
+  <ul class="submenu advanced">
+      <li >
+        <a href="/meilleurs-taux-hypothecaires">
+          <i class="fa fa-fw fa-home"></i>
+          <span>Comparez les taux</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title">comparer les taux hypothécaires</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-fixed-mortgage-rates"></div>
+                        </div>
+                        <div class="title">Taux hypothécaires fixes</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-variable-mortgage-rates"></div>
+                        </div>
+                        <div class="title">Taux hypothécaires variables</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-heloc-mortgage-rates"></div>
+                        </div>
+                        <div class="title">Taux hypothécaires HELOC</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-cash-back-mortgage-rates"></div>
+                        </div>
+                        <div class="title">Taux hypothécaires cash back</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">taux par prestataire</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/banque/meilleurs-taux-hypothecaires-banques">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-all-bank-mortgage-rates"></div>
+                        </div>
+                        <div class="title">Tous les taux hypothécaires bancaires</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/courtier/meilleurs-taux-hypothecaires-courtiers">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-all-broker-mortgage-rates"></div>
+                        </div>
+                        <div class="title">Tous les tarifs courtier hypothécaires</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a href="/meilleurs-taux-hypothecaires">
+          <i class="fa fa-fw fa-sort-numeric-asc"></i>
+          <span>Termes</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title"></div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-see-all-terms"></div>
+                        </div>
+                        <div class="title">Voir Tous les termes</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">termes populaires</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires/3-ans/fixe">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-3-yr-fixed-rates"></div>
+                        </div>
+                        <div class="title">3 années à taux fixe</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires/5-ans/fixe">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-5-yr-fixed-rates"></div>
+                        </div>
+                        <div class="title">5 années à taux fixe</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires/10-ans/fixe">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-10-yr-fixed-rates"></div>
+                        </div>
+                        <div class="title">10 années à taux fixe</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires/3-ans/variable">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-3-yr-variable-rates"></div>
+                        </div>
+                        <div class="title">3 taux variables de année</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/meilleurs-taux-hypothecaires/5-ans/variable">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-5-yr-variable-rates"></div>
+                        </div>
+                        <div class="title">5 taux variables de année</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a href="/courtier-hypothecaire-canada">
+          <i class="fa fa-fw fa-users"></i>
+          <span>Fournisseurs</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title"></div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/courtier-hypothecaire-canada">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-find-mortgage-broker"></div>
+                        </div>
+                        <div class="title">Trouver un courtier hypothécaire</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">courtiers populaires</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/courtiers/safebridge-hypotheque">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-safebridge"></div>
+                        </div>
+                        <div class="title">Hypothèques Safebridge</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/brokers/canwise-financial-mortgage-rates">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-canwise-financial"></div>
+                        </div>
+                        <div class="title">Hypothèques Canwise Financial</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/courtiers/butler-mortgage-hypotheque">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-butler-mortgage"></div>
+                        </div>
+                        <div class="title">Hypothèques Butler</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">banques populaires</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/banques/banque-scotia-hypotheque">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-scotiabank"></div>
+                        </div>
+                        <div class="title">Hypothèques Scotiabank</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/banques/banque-td-hypotheque">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-td-bank"></div>
+                        </div>
+                        <div class="title">Hypothèques TD</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/banques/banque-royale-hypotheque">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-rbc-royal-bank"></div>
+                        </div>
+                        <div class="title">Hypothèques RBC</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/banques/banque-cibc-hypotheque">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-cibc"></div>
+                        </div>
+                        <div class="title">Hypothèques CIBC</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a >
+          <i class="fa fa-fw rh-calculator"></i>
+          <span>Calculatrices</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title">calculatrices achat d&#039;une maison</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/calcul-versement-hypothecaire">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-payment-calculator"></div>
+                        </div>
+                        <div class="title">Calculatrice de paiements</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/calculateur-de-pret-hypothecaire-selon-votre-capacite-d-emprunt">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-affordability-calculator"></div>
+                        </div>
+                        <div class="title">Calculatrice de capacité financière</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/taxe-de-bienvenue">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-land-transfer-tax-calculator"></div>
+                        </div>
+                        <div class="title">Calculatrice d&#039;impôt de cession immobilière</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/schl">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-mortgage-insurance-calculator"></div>
+                        </div>
+                        <div class="title">Calculateur d&#039;assurances hypothécaires</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">calculatrices de refinancement</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/calculatrice-refinancement-hypothecaire">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-refinance-calculator"></div>
+                        </div>
+                        <div class="title">Refinancement calculatrice</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/calculatrice-penalite-hypothecaire">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-penalty-calculator"></div>
+                        </div>
+                        <div class="title">Calculatrice de pénalité</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/calculatrice-consolidation-dettes">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-debt-consolidation-calculator"></div>
+                        </div>
+                        <div class="title">Consolidation de la dette</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/refinancement-hypothecaire-equite">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-max-equity-refinance"></div>
+                        </div>
+                        <div class="title">Refinancement boursière maximale</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a >
+          <i class="fa fa-fw fa-lightbulb-o"></i>
+          <span>Centre d&#039;éducation</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title">parcourir notre centre d&#039;éducation</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/acheter">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-home-buying-guide"></div>
+                        </div>
+                        <div class="title">Accueil Guide d&#039;achat</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/renewing">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-renewing-guide"></div>
+                        </div>
+                        <div class="title">Guide renouveler</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/refinancing">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-refinancing-guide"></div>
+                        </div>
+                        <div class="title">Guide de refinancement</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/hypotheques-speciales">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-special-mortgages-guide"></div>
+                        </div>
+                        <div class="title">Guide sur les hypothèques spéciales</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/glossaire-hypothecaire">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-mg-glossary"></div>
+                        </div>
+                        <div class="title">Glossaire</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+  </ul>
+  </li><li data-url="/cartes-de-credit">
+      <a href="/cartes-de-credit">
+        <i class="fa fa-fw fa-credit-card"></i>
+      <span>Cartes de crédit</span>
+        <i class="fa fa-fw submenu-indicator"></i>
+      </a>
+  <ul class="submenu advanced">
+      <li >
+        <a href="/cartes-de-credit/selecteur-de-scenario">
+          <i class="fa fa-fw fa-credit-card"></i>
+          <span>Comparer les cartes</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title"></div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/meilleures-cartes-de-credit">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-best-credit-cards"></div>
+                        </div>
+                        <div class="title">Meilleures cartes de credit</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">Cartes de récompenses</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/voyages">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-travel-credit-cards"></div>
+                        </div>
+                        <div class="title">Récompenses voyage</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/remise-en-argent">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-cash-back-credit-cards"></div>
+                        </div>
+                        <div class="title">Remise en argent</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/credit-magasins">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-store-credit-cards"></div>
+                        </div>
+                        <div class="title">Crédit de magasins</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">Autres types de cartes</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/faible-taux-d-interets">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-low-interest-credit-cards"></div>
+                        </div>
+                        <div class="title">À faible intérêts</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/sans-frais">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-no-fee-credit-cards"></div>
+                        </div>
+                        <div class="title">Sans frais</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/transfert-de-solde">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-balance-transfer-credit-cards"></div>
+                        </div>
+                        <div class="title">Transfert de solde</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/guarantie">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-secured-credit-cards"></div>
+                        </div>
+                        <div class="title">Sécurisée</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/entreprises">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-business-credit-cards"></div>
+                        </div>
+                        <div class="title">Pour Entreprises</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/etudiant">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-student-credit-cards"></div>
+                        </div>
+                        <div class="title">Pour Étudiants</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a >
+          <i class="fa fa-fw fa-gift"></i>
+          <span>Programmes</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title">meilleurs programmes</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/aeroplan-miles">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-aeroplan"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Aeroplan Miles</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/td-points">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-td-bank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit TD Points</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">tous les programmes de voyage</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/aeroplan-miles">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-aeroplan"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Aeroplan</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/air-miles">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-air-miles"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Air Miles</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/aventura-points">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-cibc"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Aventura</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/carte/best-western-rewards-mastercard">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-best-western"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Best Western</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/carte/carte-de-credit-azur">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-blue-sky"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Blue Sky</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/carte/carte-visa-premier-marriott-rewards">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-marriott-rewards"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Marriott</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/mbna-reward-points">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-mbna"></div>
+                        </div>
+                        <div class="title">Cartes de crédit MBNA Rewards</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/rbc-rewards-points">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-rbc-royal-bank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit RBC Rewards</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/scotia-rewards-points">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-scotiabank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Scotia Rewards</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/starpoints">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-starpoints"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Starwood</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/td-points">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-td-bank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit TD Points</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">Tous les programmes de crédit de magasin</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/amazon-ca-points">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-amazon-points"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Amazon.ca</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/carte/carte-visa-scene">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-scene"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Scene</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/carte/target-rbc-mastercard">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-target"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Target</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/carte/recompenses-walmart-mastercard">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-walmart"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Walmart</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a >
+          <i class="fa fa-fw fa-bank"></i>
+          <span>Fournisseurs</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title">Réseaux de cartes de crédit</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/visa">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-visa"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Visa</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/mastercard">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-mastercard"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Mastercard</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/american-express-network">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-american-express"></div>
+                        </div>
+                        <div class="title">Cartes de crédit American Express</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">banques populaires</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/scotiabank">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-scotiabank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Scotiabank</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/bank-of-montreal">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-bank-of-montreal"></div>
+                        </div>
+                        <div class="title">Cartes de crédit BMO</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">toutes les banques</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/american-express">
+                        <div class="thumbnail">
+                            <div class="sprite program-logos-american-express"></div>
+                        </div>
+                        <div class="title">Cartes de crédit American Express</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/banque-de-montreal">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-bank-of-montreal"></div>
+                        </div>
+                        <div class="title">Cartes de crédit BMO</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/chase">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-chase"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Chase</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/banque-cibc">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-cibc"></div>
+                        </div>
+                        <div class="title">Cartes de crédit CIBC</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/desjardins">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-desjardins"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Desjardins</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/banque-nationale-du-canada">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-national-bank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Banque Nationale du Canada</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/banque-laurentian">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-laurentian"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Banque Laurentienne</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/mbna">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-mbna"></div>
+                        </div>
+                        <div class="title">Cartes de crédit MBNA</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/meridian">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-meridian-credit-union"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Meridian</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/le-choix-du-president-services-financiers">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-pc-financial"></div>
+                        </div>
+                        <div class="title">Cartes de crédit PCedit Cards</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/banque-royale">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-rbc-royal-bank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit RBC</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/banque-scotia">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-scotiabank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit Scotiabank</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/banque-td">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-td-bank"></div>
+                        </div>
+                        <div class="title">Cartes de crédit TD</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a >
+          <i class="fa fa-fw rh-calculator"></i>
+          <span>Calculatrice</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title"></div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/calculatrice-de-recompenses">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-rewards-calculator"></div>
+                        </div>
+                        <div class="title">Calculatrice des récompenses</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a >
+          <i class="fa fa-fw fa-lightbulb-o"></i>
+          <span>Centre d&#039;éducation</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title">parcourir notre centre d&#039;éducation</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/notions-de-base">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-credit-card-basics"></div>
+                        </div>
+                        <div class="title">Bases de cartes de crédit</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/types-de-cartes">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-best-credit-cards"></div>
+                        </div>
+                        <div class="title">Types de cartes de crédit</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/types-de-recompenses">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-rewards-credit-card-guides"></div>
+                        </div>
+                        <div class="title">Guide des cartes de crédit à récompenses</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/produits-assurances">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-credit-card-insurance-guide"></div>
+                        </div>
+                        <div class="title">Assurances offertes par les cartes de crédit</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cartes-de-credit/cote-de-credit-et-fraude">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-cc-credit-score-fraud-guide"></div>
+                        </div>
+                        <div class="title">Bureau de crédit et fraude</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+  </ul>
+  </li><li data-url="/comptes">
+      <a href="/comptes">
+        <i class="fa fa-fw fa-bank"></i>
+      <span>Comptes</span>
+        <i class="fa fa-fw submenu-indicator"></i>
+      </a>
+  <ul class="submenu advanced">
+      <li >
+        <a href="/comptes-d-epargne">
+          <i class="fa fa-fw fa-search"></i>
+          <span>Comptes d&#039;épargne</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title"></div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/meilleurs-comptes-d-epargne">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-see-all-types"></div>
+                        </div>
+                        <div class="title">Voir tous les types</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">Types de comptes d&#039;épargne</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/interets-eleves">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-high-interest-accounts"></div>
+                        </div>
+                        <div class="title">Intérêts élevés</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/celi">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg-celi"></div>
+                        </div>
+                        <div class="title">CELI</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/reer">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-high-reer"></div>
+                        </div>
+                        <div class="title">REER</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/jeunesse">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-jeunesse"></div>
+                        </div>
+                        <div class="title">Jeunesse</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/aines">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-aines"></div>
+                        </div>
+                        <div class="title">Aînés</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a href="/comptes-cheques">
+          <i class="fa fa-fw fa-search"></i>
+          <span>Comptes chèques</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title"></div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/meilleurs-comptes-cheques">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-see-all-types"></div>
+                        </div>
+                        <div class="title">Voir tous les types</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">Types de comptes chèques</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/regulier">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ch-personal-chq-act"></div>
+                        </div>
+                        <div class="title">Régulier</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/etudiant">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ch-student-act"></div>
+                        </div>
+                        <div class="title">Étudiant</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/jeunesse">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-jeunesse"></div>
+                        </div>
+                        <div class="title">Jeunesse</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/aines">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-aines"></div>
+                        </div>
+                        <div class="title">Aînés</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a >
+          <i class="fa fa-fw fa-users"></i>
+          <span>Fournisseurs</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title">Fournisseurs de compte d&#039;épargne</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/banque-eqb">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-eq-bank"></div>
+                        </div>
+                        <div class="title">Banque EQB</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/tangerine">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-tangerine"></div>
+                        </div>
+                        <div class="title">Tangerine</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/banque-td">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-td-bank"></div>
+                        </div>
+                        <div class="title">Banque TD</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/banque-cibc">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-cibc"></div>
+                        </div>
+                        <div class="title">Banque CIBC</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-d-epargne/comptes/oaken-financial">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-oaken-financial"></div>
+                        </div>
+                        <div class="title">Oaken Financial</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">Fournisseurs de comptes chèques</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/tangerine">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-tangerine"></div>
+                        </div>
+                        <div class="title">Tangerine</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/banque-td">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-td-bank"></div>
+                        </div>
+                        <div class="title">Banque TD</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/banque-cibc">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-cibc"></div>
+                        </div>
+                        <div class="title">Banque CIBC</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/banque-scotia">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-scotiabank"></div>
+                        </div>
+                        <div class="title">Banque Scotia</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/comptes-cheques/comptes/banque-de-montreal">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-bank-of-montreal"></div>
+                        </div>
+                        <div class="title">Banque de Montréal</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+  </ul>
+  </li><li data-url="/cpg/">
+      <a href="/cpg/">
+        <i class="fa fa-fw fa-bank"></i>
+      <span>Placements</span>
+        <i class="fa fa-fw submenu-indicator"></i>
+      </a>
+  <ul class="submenu advanced">
+      <li >
+        <a href="/cpg/">
+          <i class="fa fa-fw fa-search"></i>
+          <span>Taux CPG</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title"></div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cpg/meilleurs-taux-de-cpg">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-see-all-types"></div>
+                        </div>
+                        <div class="title">Voir tous les types</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">Types de CPG</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/enregistre/1-ans">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-registered-rates"></div>
+                        </div>
+                        <div class="title">Enregistré</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/non-enregistre/1-ans/">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg"></div>
+                        </div>
+                        <div class="title">Non-enregistré</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/celi/1-ans/">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg-celi"></div>
+                        </div>
+                        <div class="title">CELI</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/usd/1-ans/">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-usd-rates"></div>
+                        </div>
+                        <div class="title">USD</div>
+                      </a>
+                    </li>
+                </ul>
+              </div><div class="section">
+                <div class="title">Termes CPG</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/non-enregistre/180-jour">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-180-days"></div>
+                        </div>
+                        <div class="title">180 Jours</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/non-enregistre/1-ans">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg-1-yr"></div>
+                        </div>
+                        <div class="title">1 An</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/non-enregistre/2-ans">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg-2-yr"></div>
+                        </div>
+                        <div class="title">2 Ans</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/non-enregistre/3-ans">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg-3-yr"></div>
+                        </div>
+                        <div class="title">3 Ans</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/non-enregistre/4-ans">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg-4-yr"></div>
+                        </div>
+                        <div class="title">4 Ans</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/non-enregistre/5-ans">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg-5-yr"></div>
+                        </div>
+                        <div class="title">5 Ans</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/taux-cpg/non-enregistre/6-ans">
+                        <div class="thumbnail">
+                            <div class="sprite nav-icons-ba-cpg-6-yr"></div>
+                        </div>
+                        <div class="title">6 Ans</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+      <li >
+        <a >
+          <i class="fa fa-fw fa-users"></i>
+          <span>Fournisseurs</span>
+          <i class="fa fa-fw submenu-indicator"></i>
+        </a>
+          <div class="content content-style2">
+<div class="section">
+                <div class="title">Fournisseurs de taux CPG</div>
+                <ul>
+                    <li >
+                      <a class="pane" href="/cpg/banque-td-taux-cpg/non-enregistre/1-ans">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-td-bank"></div>
+                        </div>
+                        <div class="title">Banque TD</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/banque-de-montreal-taux-cpg/non-enregistre/1-ans">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-bank-of-montreal"></div>
+                        </div>
+                        <div class="title">Banque de Montréal</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/banque-cibc-taux-cpg/non-enregistre/1-ans">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-cibc"></div>
+                        </div>
+                        <div class="title">Banque CIBC</div>
+                      </a>
+                    </li>
+                    <li >
+                      <a class="pane" href="/cpg/oaken-financial-taux-cpg/non-enregistre/1-ans">
+                        <div class="thumbnail">
+                            <div class="sprite provider-nav-oaken-financial"></div>
+                        </div>
+                        <div class="title">Oaken Financial</div>
+                      </a>
+                    </li>
+                </ul>
+              </div>          </div>
+      </li>
+  </ul>
+  </li><li >
+      <span>
+        <i class="fa fa-fw fa-users"></i>
+      <span>Société</span>
+        <i class="fa fa-fw submenu-indicator"></i>
+      </span>
+  <ul class="simple submenu">
+<li data-url="/?lang=en">
+      <a href="/?lang=en">
+      <span>Ratehub in English</span>
+        <i class="fa fa-fw no-submenu"></i>
+      </a>
+  </li><li data-url="/pour-en-savoir-plus">
+      <a href="/pour-en-savoir-plus">
+      <span>À propos de nous</span>
+        <i class="fa fa-fw no-submenu"></i>
+      </a>
+  </li><li data-url="/blogue">
+      <a href="/blogue">
+        <i class="fa fa-fw fa-file-text-o"></i>
+      <span>Blogue</span>
+        <i class="fa fa-fw no-submenu"></i>
+      </a>
+  </li><li data-url="/contactez-nous">
+      <a href="/contactez-nous">
+        <i class="fa fa-fw fa-phone"></i>
+      <span>Contactez nous</span>
+        <i class="fa fa-fw no-submenu"></i>
+      </a>
+  </li><li data-url="/affichage-des-meilleurs-taux-en-vigueur-et-outils-de-calcul-hypothecaire">
+      <a href="/affichage-des-meilleurs-taux-en-vigueur-et-outils-de-calcul-hypothecaire">
+      <span>Téléchargez nos outils</span>
+        <i class="fa fa-fw no-submenu"></i>
+      </a>
+  </li><li data-url="/media">
+      <a href="/media">
+      <span>Médias</span>
+        <i class="fa fa-fw no-submenu"></i>
+      </a>
+  </li>  </ul>
+  </li>  </ul>
+          </nav>
+        </div><div id="nav_other" class="fr">
+          <ul class="menu desktop"><li class="search">
+            <a>
+              <span><i class="fa fa-search"></i></span>
+            </a>
+            <div class="submenu simple searchbar hang-left">
+              <form id="search" name="search" action="/search" method="get">
+                <input class="rh-input" type="text" name="q" placeholder="Recherche">
+                <button type="submit">
+                  <i class="fa fa-level-down fa-rotate-90"></i>
+                </button>
+                <a>
+                  <i class="fa fa-fw fa-close"></i>
+                </a>
+              </form>
+            </div>
+          </li>              <a id="login" class="rh-button rh-button--secondary" href="/login" rh-popup popup-width="490px" popup-height="650px" popup-class="rh-login-popup" popup-min-width="640px" force-standard-mobile="true">
+Connexion              </a>
+          </ul>
+        </div></div>
+      </div>
+  </header>
+      <div class="content-area">
+  <div style="margin:2em 0;">
+    <img src="/assets/images/404.png" style="width:40%; text-align: center; vertical-align: middle; margin: 1.5em 0"><div style="display: inline-block; vertical-align: middle; width: 60%; padding-left: 3em; box-sizing: border-box;">
+        <h2>Nous sommes désolés - nous n'avons pas pu trouvé la page que vous avez demandée</h2>
+        <br>
+        <h3>Qu'est-ce qui aurait pu causer ça?</h3>
+        <p>Eh bien, quelque chose de technique s'est mal passé sur notre site.</p>
+        <p>Nous avons peut-être supprimé la page lorsque nous avons modifié notre site web.</p>
+        <p>Ou le lien sur lequel vous avez cliqué peut être incorrect.</p>
+        <p>Ou vous avez peut-être tapé accidentellement la mauvaise URL dans la barre d'adresse.</p>
+        <h3>Qu’est ce que vous pouvez faire?</h3>
+        <p>Vous pouvez essayer de retaper l'URL et d'essayer à nouveau.</p>
+        <p>Ou nous pourrions vous ramener à la page d'accueil de <a href="/comparez">Ratehub.ca</a>.</p>
+        <p>Ou vous pouvez facilement <a href="/recherche">rechercher</a> à nouveau ce que vous recherchez.</p>
+        <h3>Une dernière chose:</h3>
+        <p>Si vous voulez nous aider à résoudre ce problème, nous sommes là pour vous aider. S'il vous plaît <a href="/contactez-nous">contactez-nous</a> et laissez-nous savoir ce qui s'est mal passé.</p>
+    </div></div>
+      </div>
+  <footer>
+      <div class="leaderboard">
+        <div id="leaderboard-2"></div>
+      </div>
+  <div class="rh-stub direction-up is-open" id="footer_stub">
+    <a class="stub">
+      <span class="closed">
+        <span>
+Contenu populaire        </span>
+      </span>
+      <span class="open">
+        <span>
+Contenu populaire        </span>
+      </span>
+    </a>
+  </div>
+
+<div id="popular_content"><ul><li>
+  <span>Carte de credit </span>
+  <ul>
+    <li>
+      <a href="/cartes-de-credit">
+Comparaison des cartes de crédit      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/meilleures-cartes-de-credit">
+Meilleur carte de credit       </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/miles-aeroplan">
+Cartes de crédit Miles Aéroplan      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/air-miles">
+Cartes de crédit Air Miles						      </a>
+    </li>
+  </ul>
+</li><li>
+  <span>Meilleur carte de credit </span>
+  <ul>
+    <li>
+      <a href="/cartes-de-credit/carte/carte-mastercard-bmo-remises">
+Carte MasterCard BMO Remises      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/carte/recompenses-mbna-world-elite">
+Récompenses MBNA World Elite      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/carte/tangerine-money-back-credit-card">
+Carte de crédit Remises Tangerine      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/carte/carte-mastercard-bmo-world-elite">
+Carte MasterCard BMO World Elite						      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/carte/carte-vraie-ligne-mbna">
+Carte Vraie Ligne MBNA      </a>
+    </li>
+  </ul>
+</li><li>
+  <span>Types de cartes</span>
+  <ul>
+    <li>
+      <a href="/cartes-de-credit/remise-en-argent">
+Cartes de credit remise en argent       </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/faible-taux-d-interets">
+Cartes de crédit faible intérêts      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/recompenses">
+Cartes de crédit récompenses      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/voyages">
+Cartes de crédit voyages						      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/sans-frais">
+Cartes de crédit sans frais	      </a>
+    </li>
+    <li>
+      <a href="/cartes-de-credit/transfert-de-solde">
+Cartes de crédit transfert de solde      </a>
+    </li>
+  </ul>
+</li><li>
+  <span>Trouvez votre hypothèque</span>
+  <ul>
+    <li>
+      <a href="/taux-hypothecaires-montreal">
+Meilleurs taux à Montréal      </a>
+    </li>
+    <li>
+      <a href="/meilleurs-taux-hypothecaires">
+Meilleurs taux fixes      </a>
+    </li>
+    <li>
+      <a href="/meilleurs-taux-hypothecaires">
+Meilleurs taux variables      </a>
+    </li>
+  </ul>
+</li><li>
+  <span>
+Votre courtier<br>   </span>
+  <ul>
+    <li>
+      <a href="/courtier-hypothecaire-montreal">
+Courtiers hypothécaires Montréal      </a>
+    </li>
+    <li>
+      <a href="/courtiers/courtier-taux-hypothecaires">
+Taux des agences au Québec      </a>
+    </li>
+    <li>
+      <a href="/courtiers/courtier-taux-hypothecaires">
+Taux offerts par Multi-Prêts		      </a>
+    </li>
+  </ul>
+</li><li>
+  <span>Outils </span>
+  <ul>
+    <li>
+      <a href="/calcul-versement-hypothecaire">
+Calculez vos versement hypothécaires      </a>
+    </li>
+    <li>
+      <a href="/calculatrice-refinancement-hypothecaire">
+Calculez la pénalité de résiliation de votre contrat hypothécaire      </a>
+    </li>
+  </ul>
+</li><li>
+  <span>Ressources</span>
+  <ul>
+    <li>
+      <a href="/glossaire-hypothecaire">
+Glossaire      </a>
+    </li>
+    <li>
+      <a href="/taux-fixe-ou-variable">
+Taux fixe ou variable				      </a>
+    </li>
+    <li>
+      <a href="/rap">
+Régime d'accession à la propriété		      </a>
+    </li>
+  </ul>
+</li></ul></div>
+<div id="site_links">
+  <ul><li>
+    <span>Entreprise</span>
+    <ul>
+      <li>
+        <a href="/pour-en-savoir-plus">Plus sur Ratehub.ca</a>
+      </li>
+      <li>
+        <a href="/equipe-ratehub">Notre équipe</a>
+      </li>
+      <li>
+        <a href="/contactez-nous">Contactez nous</a>
+      </li>
+      <li>
+        <a href="/media">Médias</a>
+      </li>
+    </ul>
+  </li><li>
+    <span>Ressources</span>
+    <ul>
+      <li>
+        <a href="/logo">Logo</a>
+      </li>
+      <li>
+        <a href="/miscellaneous-images">Captures d'écran</a>
+      </li>
+      <li>
+        <a href="/disclaimer">Avis légaux</a>
+      </li>
+      <li>
+        <a href="/conditions">Conditions générales d'utilisation</a>
+      </li>
+      <li>
+        <a href="/confidentialite">Politique de vie privée</a>
+      </li>
+    </ul>
+  </li><li>
+    <span>Communauté</span>
+    <ul>
+      <li>
+        <a href="/broker-login">Accès des courtiers</a>
+      </li>
+      <li>
+        <a href="http://affiliates.ratehub.ca">Accès des partenaires</a>
+      </li>
+      <li>
+        <a href="/blogue-hypotheque">Blogue </a>
+      </li>
+      <li>
+        <a href="/affichage-des-meilleurs-taux-en-vigueur-et-outils-de-calcul-hypothecaire">Widgets</a>
+      </li>
+    </ul>
+  </li><li>
+    <span>Social</span>
+    <ul class="social">
+      <li>
+        <a href="https://www.facebook.com/ratehub.ca"><span class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-facebook fa-stack-1x"></i>
+        </span>Facebook        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/RateHub_QC"><span class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>Twitter        </a>
+      </li>
+      <li>
+        <a href="http://www.linkedin.com/company/ratehub-ca"><span class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-linkedin fa-stack-1x"></i>
+        </span>LinkedIn        </a>
+      </li>
+      <li>
+        <a href="https://plus.google.com/+RatehubMontreal/posts"><span class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-google-plus fa-stack-1x"></i>
+        </span>Google Plus        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/channel/UC7LTtB4dB5iYif95s4NyBoQ"><span class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-youtube fa-stack-1x"></i>
+        </span>YouTube        </a>
+      </li>
+    </ul>
+  </li><li>
+    <span>Coordonnées</span>
+    <ul>
+      <li>
+        <address style="font-style:normal;">
+20 rue Queen Ouest          <br>
+Suite 1100          <br>
+Toronto, ON M5H 3R3        </address>
+      </li>
+      <li class="contact__phone">
+1.800.679.9622      </li>
+    </ul>
+  </li></ul>
+  <span class="fa rh-logo"></span>
+</div>
+    <div class="nav_logo"></div>
+  </footer>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript">
+window.ratehub = {"canonicalUrl":null,"serverUri":"http:\/\/www.ratehub.ca","requestPath":"\/assets\/files\/value-of-points\/capital-one-value-of-point.pdf","pageType":null,"displayVersion":2,"isWidget":false,"experiments":{"mortgages":{"mtgNonMonForm":0,"lenderComparison":0,"renewalCardRedirectStrategy":1,"purchaseLeadSubmitStrategy":0,"appCa":0},"creditcards":{"ccNonMonForm":0,"showIncomeColumn":1,"compareButton":0,"lowInterestCardFinder":1,"cardFinderCTAs":2,"ccSideNav":0},"chequing":{"chqTransactionsTest":0,"chqPFAIconTest":1},"savings":{"savingsAdditionalFeesTest":1,"savPFAIconTest":1},"gic":{"depSideNav":0,"gicPFAIconTest":1},"babe":{"lipstickOnAPig":6}},"analytics":{"ga":{"key":"UA-17477445-1"},"heap":{"key":"3993016571"},"googleTagManager":{"containerId":"GTM-MN8QRHD"},"track":"\/404?url=\/assets\/files\/value-of-points\/capital-one-value-of-point.pdf","visitorId":"5096411920467803709"},"ads":{"tags":{"leaderboard-1":["\/57452754\/RH_ROS_728x90_Top_ATF",[728,90],"leaderboard-1"],"mobile-leaderboard-1":["\/57452754\/RH_ROS_320x50_ATF",[320,50],"mobile-leaderboard-1"],"sponsored-credit-cards":["\/57452754\/RH_FEAT_CC_1x1",[1,1],"sponsored-credit-cards"],"sponsored-mortgages":["\/57452754\/RH_FEAT_MTG_1x1",[1,1],"sponsored-mortgages"],"sponsored-gics":["\/57452754\/RH_FEAT_GIC_1x1",[1,1],"sponsored-gics"],"sponsored-savings":["\/57452754\/RH_FEAT_SAV_1x1",[1,1],"sponsored-savings"],"big-box-1":["\/57452754\/RH_ROS_300x250_ATF",[300,250],"big-box-1"],"big-box-2":["\/57452754\/RH_ROS_300x250_BTF",[[300,250],[300,600]],"big-box-2"],"big-box-content":["\/57452754\/RH_ROS_300x250_Content",[300,250],"big-box-content"],"big-box-content-2":["\/57452754\/RH_ROS_300x250_Content_2",[300,250],"big-box-content-2"],"leaderboard-content":["\/57452754\/RH_ROS_728x90_Content",[728,90],"leaderboard-content"],"leaderboard-content-2":["\/57452754\/RH_ROS_728x90_Content_2",[728,90],"leaderboard-content-2"],"mobile-leaderboard-content":["\/57452754\/RH_320x50_Content",[320,50],"mobile-leaderboard-content"],"mobile-leaderboard-content-2":["\/57452754\/RH_320x50_Content_2",[320,50],"mobile-leaderboard-content-2"],"leaderboard-2":["\/57452754\/RH_ROS_728x90_Bottom_BTF",[728,90],"leaderboard-2"],"mobile-leaderboard-2":["\/57452754\/RH_ROS_320x50_BTF",[320,50],"mobile-leaderboard-2"],"skin":["\/57452754\/RH_ROS_SKIN_1x1",[[1,1],[1000,1000]],"skin"]},"targeting":{"section":[null]},"exclusions":["\/blog\/porting-or-transferring-your-mortgage\/","\/blog\/5-ways-to-pay-off-your-mortgage-early\/","\/blog\/renting-vs-buying-what-to-consider\/","blog\/review-eq-bank-savings-plus-account\/"]},"features":{"sumome":true,"zopim":false,"optimizer":true},"mapsKey":"AIzaSyBJxz04g2iWoWuUU187XrNbPoI0aJSv95g","csrf":null,"user":{"browser":{"mobile":false},"location":{"id":797,"name":"Winnipeg","slug":"winnipeg","status":"default","province":{"code":"MB","full_name":"Manitoba","common_name":"Manitoba","sort_order":4,"slug":"manitoba","timezone":"America\/Winnipeg","principal_city":{"id":797,"name":"Winnipeg","slug":"winnipeg","status":"default","province":[],"latitude":49.88330078125,"longitude":-97.1374937}},"latitude":49.88330078125,"longitude":-97.1374937},"language":"fr","aff_info":null},"strings":{"messages":{"close":"Ferm\u00e9","unknown-err-msg":"Une erreure inconnue s'est produite. Veuillez essayez de nouveau plus tard.","blank-email-err-msg":"Un courriel doit \u00eatre saisi.","blank-username-err-msg":"Le champ \u00ab\u00a0nom d'utilisateur\u00a0\u00bb doit \u00eatre rempli.","invalid-email-err-msg":"L'adresse courriel que vous avez entr\u00e9 n'est pas valide.","blank-password-err-msg":"Un mot de passe doit \u00eatre saisi.","blank-firstname-err-msg":"Un pr\u00e9nom doit \u00eatre saisi.","blank-lastname-err-msg":"Un nom doit \u00eatre saisi.","user-exists-err-msg":"Cette adresse de courrier \u00e9lectronique a d\u00e9j\u00e0 \u00e9t\u00e9 inscrite, veuillez utiliser un autre courriel.","alt-user-exists-err-msg":"Cette adresse courriel est d\u00e9j\u00e0 enregistr\u00e9e. Veuillez vous connecter ci-dessus ou cr\u00e9er un nouveau compte.","incorrect-login-err-msg":"Identifiant ou mot de passe incorrect.","incorrect-password-err-msg":"Le mot de passe est incorrect.","auth-revoke-err-msg":"Impossible de r\u00e9voquer l'authentification.","validation-err-msg":"Impossible de valider l'utilisateur.","user-not-registered-msg":"Cette adresse de courriel n'est pas enregistr\u00e9e.","passwords-match-err-msg":"Les mots de passe ne correspondent pas.","token-retrieve-err-msg":"Unable to retrieve token.","password-reset-err-msg":"Unable to reset password.","token-validate-err-msg":"Unable to validate token.","change-email-err-msg":"Unable to change e-mail.","disable-account-err-msg":"Unable to disable account.","re-enable-account-err-msg":"Unable to re-enable account.","account-disabled":"That account has been disabled","account-not-verified":"The user's account has not been verified","domain-key-invalid":"The domain key passed to the auth service is incorrect","email-does-exist":"That email account does not exist","email-exists":"That email account exists already","exception":"An unhandled error has occured","forgot-token-invalid":"The forgot token is invalid","invalid-credentials":"The email address or password is incorrect","no-such-email":"The email address does not exist","password-mismatch":"The passwords don't match","token-invalid-or-expired":"The reset password token is invalid or has expired","user-disabled":"The user account has been disabled","user-exists":"The user already exists","passwords-space-err-msg":"Le nouveau mot de passe doit comporter de 8 \u00e0 32 caract\u00e8res (sans espaces)."}}};  </script>
+    <script type="text/javascript" src="/assets/js/app.js?v=2fc277b5"></script>
+    <script type="text/javascript" src="/assets/js/controls.js?v=f6e434b8"></script>
+  <script type="text/javascript">
+
+                jQuery('form').append('<input type="hidden" name="_token" value="">');
+            
+rh.Control.init();
+  </script>
+  <div id="hidden" style="display:none;">
+      <div id="skin"></div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"01f43ed725","applicationID":"11263150","transactionName":"blNXYxdYX0FXBkRfW1cZdkIWTV5fGU8fUlFfV0BbERRdU08KRUI=","queueTime":0,"applicationTime":206,"atts":"QhRUFV9CTE8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>  </body>
+</html>

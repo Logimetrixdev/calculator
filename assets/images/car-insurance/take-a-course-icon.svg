@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>take-a-course-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="take-a-course-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M30.6363636,3 L10.5454545,3 C9.69192357,3 9,3.70142056 9,4.56666667 L9,48.4333333 C9,49.2985794 9.69192357,50 10.5454545,50 L41.4545455,50 C42.3080764,50 43,49.2985794 43,48.4333333 L43,15.5333333 L30.6363636,3 Z M31,3 L31,14.375 C31,15.2724627 31.6715729,16 32.5,16 L43,16 M24,22 L19.5,17.25 L15,22 L15,6.16666667 C15,4.41776496 16.3431458,3 18,3 L27,3 C25.3431458,3 24,4.41776496 24,6.16666667 L24,22 Z M15,31 L37,31 L15,31 Z M15,37 L27,37 L15,37 Z" id="take-course-icon" stroke="#FFFFFF" stroke-width="2"></path>
+    </g>
+</svg>

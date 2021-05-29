@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+<html lang="en" class="loap">
+
+<!-- Mirrored from www.ratehub.ca/mortgage-payment-calculator by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Feb 2021 07:25:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Ashish </title>
+  <meta name="description" content="Calculate your monthly mortgage payment, see the corresponding amortization schedule, and test down payment scenarios using our mortgage payment calculator.">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon2a43.png?v=A079kwKzvM">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x322a43.png?v=A079kwKzvM">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x162a43.png?v=A079kwKzvM">
+  <link rel="manifest" href="site2a43.html?v=A079kwKzvM">
+  <link rel="mask-icon" href="safari-pinned-tab2a43.svg?v=A079kwKzvM" color="#000000">
+  <link rel="shortcut icon" href="favicon2a43.ico?v=A079kwKzvM">
+  <meta name="apple-mobile-web-app-title" content="Ratehub.ca">
+  <meta name="application-name" content="Ratehub.ca">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/FB-opengraph-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:title" content="Mortgage Calculator Canada | Calculate Mortgage Payment">
+  <meta property="og:description" content="Calculate your monthly mortgage payment, see the corresponding amortization schedule, and test down payment scenarios using our mortgage payment calculator.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="assets/css/app67a7.css?v=77e67283">
+  <link rel="stylesheet" type="text/css" href="assets/css/calculators72aa.css?v=c5abf499">
+  <!--[if IE 8]>
+    <script src="/assets/js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/fallbacks-ie8.css">
+    <script src="/assets/js/respond.js"></script>
+  <![endif]-->
+</head>
+<body ng-app="ratehub" class="rh normal">
+  <script>
+    var _vwo_code=(function(){ var account_id=313142, settings_tolerance=3000, library_tolerance=3500, use_existing_jquery=true, f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('http://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();var _vis_opt_queue=window._vis_opt_queue||[],_vis_counter=0;_vis_opt_queue.push(function(){try{if(!_vis_counter){for(var _,o,e={},i=0;i<_vwo_exp_ids.length;i++)o=_vwo_exp_ids[i],_vwo_exp[o].ready&&(_=_vis_opt_readCookie("_vis_opt_exp_"+o+"_combi"),void 0!==_vwo_exp[o].combination_chosen&&(_=_vwo_exp[o].combination_chosen),void 0!==_vwo_exp[o].comb_n[_]&&(e["VWO-Test-ID-"+o]=_vwo_exp[o].comb_n[_],_vis_counter++));_vis_counter&&heap.addUserProperties(e)}}catch(_){}});      </script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN8QRHD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <svg class="sprite-sheet" style="position: absolute; width: 0; height: 0;">
+    </svg>
+
+    <div class="content-area">
+      <div class="l-container">
+        <main >
+          <div class="l-split-left">
+            <div class="l-content">
+              <h1 class="withDot">Mortgage Payment Calculator Canada</h1>
+
+              <div id="payment-calc" class="ratehub-calc full">
+
+                <div class="rh-calc-wrapper lang-en">
+                 <div class="rh-calc-tabs" style="">
+
+                   <div class="rh-holder first selected">
+                    <h2><a class="purchase" href="#">Purchase</a></h2>
+                  </div>
+                  <div class="rh-holder">
+                    <!-- this tab only displays renewal rates, but we call it renewal/refinance because many users confuse the two -->
+                    <h2><a class="renewal" href="#">Renewal or Refinance</a></h2>
+                  </div>
+                </div>
+                <div class="rh-calc-block">
+                  <form novalidate>
+                   <table class="rh-calc-head">
+                     <tr>
+                      <td class="col01">
+                       <h3 id="ask_heading">Asking Price</h3>
+                     </td>
+                     <td class="col02">
+                       <label for="ask" class="accessible">Asking Price</label>
+                       <input id="ask" name="ask" type="text" class="text input-number " value="" />
+                     </td>
+                     <td class="col03">
+                       <a class="go" href="#" tabindex="9"><span>Go</span></a>
+                       <div class="calc-tip-wrapper calc-tip-step1" >
+                        <div class="calc-tip nib-left">
+                         <div class="calc-tip-top"></div>
+                         <div class="calc-tip-middle">
+                          <div class="calc-tip-title"><a href="#" class="calc-tip-close">&nbsp;</a>STEP 1</div>
+                          <div class="calc-tip-content">
+                           <span class="content-purchase">Enter the price of the home you&#039;re interested in and press GO.</span>
+                           <span class="content-renew" style="display:none">Enter the amount of the mortgage you wish to renew or refinance and press GO.</span>
+                         </div>
+                       </div>
+                       <div class="calc-tip-bottom"></div>
+                       <div class="calc-tip-nib"></div>
+                     </div>
+                   </div>
+                 </td>
+                 <td class="social" colspan="2" style="text-align:right;">
+                  <div class="calc-social-icons">
+                    <!-- <iframe class="fb_iframe_widget" src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.ratehub.ca%2Fmortgage-payment-calculator&amp;layout=box_count&amp;show_faces=false&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:45px;" allowTransparency="true"></iframe> -->
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table class="rh-calc-main" >
+              <tbody class="purchase" style="">
+                <tr class="downpayment percent">
+                 <td class="col1" rowspan="2">Down payment</td>
+                 <td class="col2" rowspan="2">  <span class="rh-tooltip-container top-right">
+                  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-question fa-stack-1x"></i>
+                  </span><span class="fa-stack is-hover">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+                  </span></a>
+                  <span class="rh-title">
+                  Down payment      </span>
+                  <span class="rh-content">
+                  The amount of money you pay up front to obtain a mortgage. The minimum down payment in Canada is 5%. For down payments of less than 20%, home buyers are required to purchase mortgage default insurance, commonly referred to as CMHC insurance.      </span>
+                </span>
+
+              </td>
+              <td class="col3"></td>
+
+              <td class="col4 scen1">
+                <label for="dp_pc1" class="accessible">Down payment 1 (%)</label>
+                <input id="dp_pc1" name="dp_pc[]" type="text" class="text input-number" data-unrounded="0.05" value="5%"/>
+              </td>
+              <td class="col4 scen2">
+                <label for="dp_pc2" class="accessible">Down payment 2 (%)</label>
+                <input id="dp_pc2" name="dp_pc[]" type="text" class="text input-number" data-unrounded="0.1" value="10%"/>
+              </td>
+              <td class="col4 scen3">
+                <label for="dp_pc3" class="accessible">Down payment 3 (%)</label>
+                <input id="dp_pc3" name="dp_pc[]" type="text" class="text input-number" data-unrounded="0.15" value="15%"/>
+              </td>
+              <td class="col4 scen4">
+                <label for="dp_pc4" class="accessible">Down payment 4 (%)</label>
+                <input id="dp_pc4" name="dp_pc[]" type="text" class="text input-number" data-unrounded="0.2" value="20%"/>
+              </td>
+            </tr>
+            <tr class="downpayment alt">
+             <td class="col3"><span class="ico-minus">minus</span></td>
+
+             <td class="col4 scen1">
+              <label for="dp_dol1" class="accessible">Down payment 1 ($)</label>
+              <input id="dp_dol1" name="dp_dol[]" type="text" class="text input-number" />
+            </td>
+            <td class="col4 scen2">
+              <label for="dp_dol2" class="accessible">Down payment 2 ($)</label>
+              <input id="dp_dol2" name="dp_dol[]" type="text" class="text input-number" />
+            </td>
+            <td class="col4 scen3">
+              <label for="dp_dol3" class="accessible">Down payment 3 ($)</label>
+              <input id="dp_dol3" name="dp_dol[]" type="text" class="text input-number" />
+            </td>
+            <td class="col4 scen4">
+              <label for="dp_dol4" class="accessible">Down payment 4 ($)</label>
+              <input id="dp_dol4" name="dp_dol[]" type="text" class="text input-number" />
+            </td>
+          </tr>
+          <tr class="cmhc">
+           <td class="col1">Mortgage insurance</td>
+           <td class="col2">  <span class="rh-tooltip-container top-right">
+            <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+              <i class="fa fa-circle-thin fa-stack-2x"></i>
+              <i class="fa fa-question fa-stack-1x"></i>
+            </span><span class="fa-stack is-hover">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+            </span></a>
+            <span class="rh-title">
+            Mortgage insurance      </span>
+            <span class="rh-content">
+            Mortgage default insurance, commonly referred to as CMHC insurance, protects the lender in the case the borrower defaults on the mortgage. Mortgage default insurance is required on all mortgages with down payments of less than 20%, which are known as high ratio mortgages. Mortgage default insurance is calculated as a percentage applied to your mortgage amount.      </span>
+          </span>
+
+        </td>
+        <td class="col3"><span class="ico-plus">plus</span></td>
+        <td class="col4 scen1"></td>
+        <td class="col4 scen2"></td>
+        <td class="col4 scen3"></td>
+        <td class="col4 scen4"></td>
+      </tr>
+      <tr class="total">
+       <td class="rh-col" colspan="2"><span>Total Mortgage Required</span></td>
+       <td class="col3"><span class="ico-well">equals</span></td>
+       <td class="col4 scen1 ">$-</td>
+       <td class="col4 scen2 ">$-</td>
+       <td class="col4 scen3 ">$-</td>
+       <td class="col4 scen4 ">$-</td>
+     </tr>
+   </tbody>
+   <tbody class="mortgage-options">
+    <tr class="amortization">
+     <td class="col1">Amortization period</td>
+     <td class="col2">  <span class="rh-tooltip-container top-right">
+      <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-question fa-stack-1x"></i>
+      </span><span class="fa-stack is-hover">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+      </span></a>
+      <span class="rh-title">
+      Amortization period      </span>
+      <span class="rh-content">
+      The length of time it will take a homeowner to pay off his/her mortgage. In Canada, the maximum amortization period for insurable mortgages is 25 years. Longer amortization periods allow homeowners to make smaller monthly payments, but equate to more interest paid over the life of the mortgage.      </span>
+    </span>
+
+  </td>
+  <td class="col3">&#160;</td>
+
+  <td class="col4 scen1">
+    <div class="calc-tip-wrapper calc-tip-step2" >
+     <div class="calc-tip nib-left">
+      <div class="calc-tip-top"></div>
+      <div class="calc-tip-middle"><a href="#" class="calc-tip-close">&nbsp;</a><div class="calc-tip-title">STEP 2</div><div class="calc-tip-content">Choose an amortization period.</div></div>
+      <div class="calc-tip-bottom"></div>
+      <div class="calc-tip-nib"></div>
+    </div>
+  </div>
+
+  <label for="amort1" class="accessible">Amortization period 1</label>
+  <select id="amort1" name="amort[]" >
+   <option value="" selected="selected" >
+   Select			</option>
+   <option value="5">5 years</option>
+   <option value="10">10 years</option>
+   <option value="15">15 years</option>
+   <option value="20">20 years</option>
+   <option value="25">25 years</option>
+   <option value="30">30 years</option>
+   <option value="other">Other</option>
+ </select>
+
+
+
+
+</td>
+<td class="col4 scen2">
+
+  <label for="amort2" class="accessible">Amortization period 2</label>
+  <select id="amort2" name="amort[]" >
+   <option value="" selected="selected" >
+   Select			</option>
+   <option value="5">5 years</option>
+   <option value="10">10 years</option>
+   <option value="15">15 years</option>
+   <option value="20">20 years</option>
+   <option value="25">25 years</option>
+   <option value="30">30 years</option>
+   <option value="other">Other</option>
+ </select>
+
+
+
+
+</td>
+<td class="col4 scen3">
+
+  <label for="amort3" class="accessible">Amortization period 3</label>
+  <select id="amort3" name="amort[]" >
+   <option value="" selected="selected" >
+   Select			</option>
+   <option value="5">5 years</option>
+   <option value="10">10 years</option>
+   <option value="15">15 years</option>
+   <option value="20">20 years</option>
+   <option value="25">25 years</option>
+   <option value="30">30 years</option>
+   <option value="other">Other</option>
+ </select>
+
+
+
+
+</td>
+<td class="col4 scen4">
+
+  <label for="amort4" class="accessible">Amortization period 4</label>
+  <select id="amort4" name="amort[]" >
+   <option value="" selected="selected" >
+   Select			</option>
+   <option value="5">5 years</option>
+   <option value="10">10 years</option>
+   <option value="15">15 years</option>
+   <option value="20">20 years</option>
+   <option value="25">25 years</option>
+   <option value="30">30 years</option>
+   <option value="other">Other</option>
+ </select>
+
+
+
+
+</td>
+</tr>
+<tr class="mortgage-rate">
+ <td class="col1">Mortgage rate</td>
+ <td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Mortgage rate      </span>
+  <span class="rh-content">
+  The rate of interest you will pay on the outstanding balance of your mortgage. This is determined by the mortgage type and mortgage provider. To see how rates vary by type and provider, click on &quot;Select Rate&quot; link on the right.      </span>
+</span>
+
+</td>
+<td class="col3">&nbsp;<br/>&nbsp;</td>
+<td class="col4 scen1" style="position:relative;">
+  <div class="calc-tip-wrapper calc-tip-step3" >
+   <div class="calc-tip nib-left">
+    <div class="calc-tip-top"></div>
+    <div class="calc-tip-middle"><div class="calc-tip-title"><a href="#" class="calc-tip-close">&nbsp;</a>STEP 3</div>
+    <div class="calc-tip-content">Choose a mortgage rate to calculate the corresponding payment.</div>
+  </div>
+  <div class="calc-tip-bottom"></div>
+  <div class="calc-tip-nib"></div>
+</div>
+</div>
+<span class="rate-value"></span>
+<div class="details">
+ <a class="rate-selector" href="#">Select rate</a>
+</div>
+</td>
+<td class="col4 scen2" style="position:relative;">
+  <span class="rate-value"></span>
+  <div class="details">
+   <a class="rate-selector" href="#">Select rate</a>
+ </div>
+</td>
+<td class="col4 scen3" style="position:relative;">
+  <span class="rate-value"></span>
+  <div class="details">
+   <a class="rate-selector" href="#">Select rate</a>
+ </div>
+</td>
+<td class="col4 scen4" style="position:relative;">
+  <span class="rate-value"></span>
+  <div class="details">
+   <a class="rate-selector" href="#">Select rate</a>
+ </div>
+</td>
+</tr>
+<tr class="mortgage-type">
+ <td class="col1">Mortgage type</td>
+ <td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Mortgage type      </span>
+  <span class="rh-content">
+  The mortgage type includes the term of the mortgage, between 1-10 years, and the rate type, variable or fixed. The mortgage term is the length of time you commit to the terms, conditions and mortgage rate with a specific lender. The mortgage rate type can be fixed for the duration of the term or variable, fluctuating with the prime rate. Fixed rates are most popular in Canada and represent 66% of all mortgages, according to the Canadian Association of Accredited Mortgage Professionals (CAAMP).      </span>
+</span>
+
+</td>
+<td class="col3">&nbsp;</td>
+<td class="col4 scen1">&nbsp;</td>
+<td class="col4 scen2">&nbsp;</td>
+<td class="col4 scen3">&nbsp;</td>
+<td class="col4 scen4">&nbsp;</td>
+</tr>
+<tr class="total-mortgage-payment">
+ <td colspan="3" class="rh-col"><h4>Total Mortgage Payment</h4></td>
+
+ <td class="col4 scen1" rowspan="2">
+  <a class="details simple">
+   <span class="amount">$-</span>
+   <hr/>
+   <span class="get-details">Get rate</span>
+ </a>
+</td>
+<td class="col4 scen2" rowspan="2">
+  <a class="details simple">
+   <span class="amount">$-</span>
+   <hr/>
+   <span class="get-details">Get rate</span>
+ </a>
+</td>
+<td class="col4 scen3" rowspan="2">
+  <a class="details simple">
+   <span class="amount">$-</span>
+   <hr/>
+   <span class="get-details">Get rate</span>
+ </a>
+</td>
+<td class="col4 scen4" rowspan="2">
+  <a class="details simple">
+   <span class="amount">$-</span>
+   <hr/>
+   <span class="get-details">Get rate</span>
+ </a>
+</td>
+</tr>
+<tr class="payment-freq">
+ <td class="col1">
+  <label for="freq">Frequency</label>
+  <select id="freq" name="freq">
+   <option value="12,1">Monthly</option>
+   <option value="26,1">Bi-weekly</option>
+   <option value="12,2">Accelerated Bi-weekly</option>
+ </select>
+</td>
+<td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Mortgage payment      </span>
+  <span class="rh-content">
+  The monthly mortgage payment is calculated based on the inputs you provided: the mortgage amount, rate type (fixed or variable), term, amortization period, and payment frequency. A general affordability rule, as outlined by the Canada Mortgage and Housing Corporation, is that your monthly housing costs should not exceed 32% of your gross household monthly income.      </span>
+</span>
+
+</td>
+<td class="col3">&#160;</td>
+</tr>
+</tbody>
+
+<tbody class="land-transfer-tax" style="">
+  <tr class="first">
+   <td class="rh-col" colspan="4" >
+    <div class="rh-title">
+     <div>
+      Land Transfer Tax:
+      <span>$-</span>
+    </div>
+  </div>
+</td>
+
+<td colspan="3" class="rh-col profile" rowspan="4">
+  <div class="calc-tip-wrapper calc-tip-step4" >
+   <div class="calc-tip nib-left">
+    <div class="calc-tip-top"></div>
+    <div class="calc-tip-middle"><a href="#" class="calc-tip-close">&nbsp;</a><div class="calc-tip-title">STEP 4</div><div class="calc-tip-content">If necessary, update your profile to calculate land transfer tax.</div></div>
+    <div class="calc-tip-bottom"></div>
+    <div class="calc-tip-nib"></div>
+  </div>
+</div>
+<div class="rh-title">
+ <div>
+ Profile							</div>
+</div>
+<div class="section">
+ <div class="rh-row">
+   <label for="ltt-location">Location:</label>
+   <span class="rh-select">
+    <span class="rh-city-selector">
+     <input id="ltt-location" name="location" required class="rh-city-select"
+     data-placeholder="Please select">
+   </span>
+ </span>
+</div>
+<div class="rh-row fthb">
+  <label for="fthb">I am a first-time home buyer</label>
+  <input type="checkbox" class="checkbox" id="fthb" name="fthb" />							</div>
+  <div class="rh-row pcp">
+    <label for="pcp">I am buying a newly built home</label>
+    <input type="checkbox" class="checkbox" id="pcp" name="pcp" />							</div>
+  </div>
+</td>
+</tr>
+<tr class="ltt provincial">
+ <td class="col1">Provincial:</td>
+ <td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Provincial      </span>
+  <span class="rh-content">
+  Land transfer tax (LTT), typically calculated as a percentage of the purchase price of a home, is required when purchasing a home in Canada. All provinces have a LTT, and the amount varies in each province.       </span>
+</span>
+
+</td>
+<td class="col3"><span class="ico-plus">plus</span></td>
+<td class="col4"><div>&nbsp;</div></td>
+</tr>
+<tr class="ltt municipal">
+ <td class="col1">Municipal:</td>
+ <td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Municipal      </span>
+  <span class="rh-content">
+  Some municipalities, like Toronto, levy an additional LTT, which is similarly calculated as a percentage of the purchase price of a home.      </span>
+</span>
+
+</td>
+<td class="col3"><span class="ico-plus">plus</span></td>
+<td class="col4"><div>&nbsp;</div></td>
+</tr>
+<tr class="ltt rebate">
+ <td class="col1">Rebate:</td>
+ <td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Rebate      </span>
+  <span class="rh-content">
+  If you are a first-time home buyer in British Columbia or Ontario, you will be eligible for LTT rebates, equal to the value of the LTT up to a maximum amount set by the province.      </span>
+</span>
+
+</td>
+<td class="col3"><span class="ico-minus">minus</span></td>
+<td class="col4"><div>&nbsp;</div></td>
+</tr>
+<tr class="ltt fees">
+ <td colspan="5" class="col1"></td>
+</tr>
+</tbody>
+<tbody class="land-transfer-tax" style="display: none;">
+  <tr class="first">
+   <td class="rh-col" colspan="5">
+    <div class="rh-title">
+     <div>
+      Land Transfer Tax								<span>$-</span>
+    </div>
+  </div>
+</td>
+</tr>
+<tr class="ltt provincial">
+ <td class="col1">Provincial:</td>
+ <td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Provincial      </span>
+  <span class="rh-content">
+  Land transfer tax (LTT), typically calculated as a percentage of the purchase price of a home, is required when purchasing a home in Canada. All provinces have a LTT, and the amount varies in each province.       </span>
+</span>
+
+</td>
+<td class="col3"><span class="ico-plus">plus</span></td>
+<td class="col4" colspan="2"><div>&nbsp;</div></td>
+</tr>
+<tr class="ltt municipal">
+ <td class="col1">Municipal:</td>
+ <td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Municipal      </span>
+  <span class="rh-content">
+  Some municipalities, like Toronto, levy an additional LTT, which is similarly calculated as a percentage of the purchase price of a home.      </span>
+</span>
+
+</td>
+<td class="col3"><span class="ico-plus">plus</span></td>
+<td class="col4" colspan="2"><div>&nbsp;</div></td>
+</tr>
+<tr class="ltt rebate">
+ <td class="col1">Rebate:</td>
+ <td class="col2">  <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-title">
+  Rebate      </span>
+  <span class="rh-content">
+  If you are a first-time home buyer in British Columbia or Ontario, you will be eligible for LTT rebates, equal to the value of the LTT up to a maximum amount set by the province.      </span>
+</span>
+
+</td>
+<td class="col3"><span class="ico-minus">minus</span></td>
+<td class="col4" colspan="2"><div>&nbsp;</div></td>
+</tr>
+<tr class="ltt fees">
+ <td colspan="5" class="col1">*You will be required to pay a title transfer fee.</td>
+</tr>
+
+<tr>
+ <td class="rh-col" colspan="5">
+  <div class="calc-tip-wrapper calc-tip-step4" >
+   <div class="calc-tip nib-left">
+    <div class="calc-tip-top"></div>
+    <div class="calc-tip-middle"><a href="#" class="calc-tip-close">&nbsp;</a><div class="calc-tip-title">STEP 4</div><div class="calc-tip-content">If necessary, update your profile to calculate land transfer tax.</div></div>
+    <div class="calc-tip-bottom"></div>
+    <div class="calc-tip-nib"></div>
+  </div>
+</div>
+
+<div class="rh-title">
+ <div>
+ Profile							</div>
+</div>
+</td>
+</tr>
+
+<tr class="ltt profile">
+ <td class="col1" colspan="3">Location</td>
+ <td class="col4" colspan="2">
+ </td>
+</tr>
+
+<tr class="ltt profile fthb">
+ <td class="col1" colspan="4">I am a first-time home buyer</td>
+ <td class="col4" colspan="1"></td>
+</tr>
+<tr class="ltt profile pcp">
+ <td class="col1" colspan="4">I am buying a newly built home</td>
+ <td class="col4" colspan="1"></td>
+</tr>
+</tbody>
+</table>
+<input type="submit" value="Calculate" style="position: absolute; width:10px; left:-999em;" />
+
+<div class="payment-calc-ext">
+  <div class="calc-tip-wrapper calc-tip-step5">
+    <div class="calc-tip nib-up">
+     <div class="calc-tip-top"></div>
+     <div class="calc-tip-middle"><div class="calc-tip-title"><a href="#" class="calc-tip-close">&nbsp;</a></div><div class="calc-tip-content">Explore the drop-downs to better understand your mortgage choice.</div></div>
+     <div class="calc-tip-bottom"></div>
+     <div class="calc-tip-nib"></div>
+   </div>
+ </div>
+ <div id="calc_extension">
+   <div class="content-page cash-needed">
+    <h3 class="section-header">
+     <a href="#">
+      <span class="section-title">Cash Needed</span><span class="expand-section"></span><div class="section-desc">How much extra cash will I need when my house closes?</div>
+    </a>
+  </h3>
+  <div class="section-content">
+   <p>When you purchase a house, there are a number of costs you&#039;ll need to put cash aside for in addition to your down payment. These costs depend on a number of factors including things like what kind of home you are buying (i.e. house vs. condo) and where the home is located.</p>
+   <p>Our tool will help you calculate these costs, so you know how much you&#039;ll need to save.</p>
+
+   <label for="home_type">Type of home:</label>
+   <select id="home_type">
+    <option value="house">House</option>
+    <option value="condo">Condominium</option>
+  </select>
+
+  <div class="ledger-header">
+    <h4>Required Cash Expenditures</h4>
+    <div class="ledger-values">
+      <label for="scenario">Scenario:</label>
+      <select id="scenario" class="scenario">
+        <option value="0">1 (5.00% down)</option>
+        <option value="1">2 (10.00% down)</option>
+        <option value="2">3 (15.00% down)</option>
+        <option value="3">4 (20.00% down)</option>
+      </select>
+    </div>
+  </div>
+  <ul class="ledger-items">
+    <li>
+     <div class="ledger-item ledger-dp">
+      <span class="item-name">Down payment</span>
+      <span class="ledger-values">
+       <span class="item-val first">$-</span>
+     </span>
+     <span class="ledger-line"></span>
+   </div>
+ </li>
+ <li>
+   <div class="ledger-item ledger-cmhc-pst">
+    <span class="item-name">PST on mortgage insurance</span>
+    <span class="ledger-values">
+     <span class="item-val first">$-</span>
+   </span>
+   <span class="ledger-line"></span>
+ </div>
+</li>
+<li>
+ <div class="ledger-item ledger-ltt">
+  <span class="item-name">Land Transfer Tax</span>
+  <span class="ledger-values">
+   <span class="item-val first">$-</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item ledger-lawyer">
+  <span class="item-name">Lawyer fees</span>
+  <span class="ledger-values">
+   <span class="item-val first">$-</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item ledger-title">
+  <span class="item-name">Title insurance</span>
+  <span class="ledger-values">
+   <span class="item-val first">$-</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li class="ledger-cert">
+ <div class="ledger-item">
+  <span class="item-name">Estoppel certificate fee</span>
+  <span class="ledger-values">
+   <span class="item-val first">$-</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item highlight ledger-cash-req">
+  <span class="item-name">Total Cash Required</span>
+  <span class="ledger-values">
+   <span class="item-val first">$-</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+
+</ul>
+
+<div class="ledger-header">
+  <h4>Other Cash Considerations</h4>
+</div>
+<ul class="ledger-items">
+  <li>
+   <div class="ledger-item ledger-inspect">
+    <span class="item-name">Home inspection fees</span>
+    <span class="ledger-values">
+     <span class="item-val first">$300 - $500</span>
+   </span>
+   <span class="ledger-line"></span>
+ </div>
+</li>
+<li>
+ <div class="ledger-item ledger-appraisal">
+  <span class="item-name">Appraisal fees</span>
+  <span class="ledger-values">
+   <span class="item-val first">$300</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="content-page monthly-expenses">
+  <h3 class="section-header">
+   <a href="#">
+    <span class="section-title">Monthly Expenses</span><span class="expand-section"></span><div class="section-desc">Can I afford my monthly expenses &amp; mortgage payments?</div>
+  </a>
+</h3>
+<div class="section-content">
+<!--
+			<div class="ledger-header">
+				<h4>Income</h4>
+				<div class="ledger-values">
+					<label for="scenario">Scenario:</label>
+					<select id="scenario">
+						<option value="0">1</option>
+						<option value="1">2</option>
+						<option value="2">3</option>
+						<option value="3">4</option>
+					</select>
+				</div>
+			</div>
+			<ul class="ledger-items">
+				<li>
+					<div class="ledger-item ledger-income">
+						<span class="item-name">Total</span>
+						<span class="ledger-values">
+							<span class="item-val first">$-</span>
+						</span>
+						<span class="ledger-line"></span>
+					</div>
+				</li>
+				<li>
+					<div class="ledger-item indent ledger-income-tax">
+						<span class="item-name">Less: Income tax</span>
+						<span class="ledger-values">
+							<span class="item-val first">$-</span>
+						</span>
+						<span class="ledger-line"></span>
+					</div>
+				</li>
+				<li>
+					<div class="ledger-item highlight ledger-net-income">
+						<span class="item-name">Net income</span>
+						<span class="ledger-values">
+							<span class="item-val first">$-</span>
+						</span>
+						<span class="ledger-line"></span>
+					</div>
+				</li>
+			</ul>
+    -->
+    <div class="ledger-header">
+      <h4>Expenses</h4>
+      <div class="ledger-values">
+       <label for="scen_2">Scenario:</label>
+       <select id="scen_2" class="scenario">
+        <option value="0">1 (5.00% down)</option>
+        <option value="1">2 (10.00% down)</option>
+        <option value="2">3 (15.00% down)</option>
+        <option value="3">4 (20.00% down)</option>
+      </select>
+    </div>
+  </div>
+  <ul class="ledger-items">
+    <li>
+     <div class="ledger-item ledger-mtg-payment">
+      <span class="item-name">Mortgage payment</span>
+      <span class="ledger-values">
+       <span class="item-val first">$-</span>
+     </span>
+     <span class="ledger-line"></span>
+   </div>
+ </li>
+ <li class="ledger-prop-tax">
+   <div class="ledger-item">
+    <span class="item-name">Property Tax</span>
+    <span class="ledger-values">
+     <input class="item-val first input-number" value="$-" />		
+   </span>
+   <span class="ledger-line"></span>
+ </div>
+</li>
+<li>
+ <div class="ledger-item ledger-debt">
+  <span class="item-name">Monthly Debt Payments</span>
+  <span class="ledger-values">
+   <input class="item-val first input-number" value="$0" />
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item ledger-utils">
+  <span class="item-name">Utilities</span>
+  <span class="ledger-values">
+   <input class="item-val first input-number" value="$-" />
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li class="ledger-condo">
+ <div class="ledger-item">
+  <span class="item-name">Condo Fees</span>
+  <span class="ledger-values">
+   <input class="item-val first input-number" value="$300" />
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item ledger-prop-ins">
+  <span class="item-name">Property insurance</span>
+  <span class="ledger-values">
+   <input class="item-val first input-number" value="$50" />
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item ledger-phone">
+  <span class="item-name">Phone</span>
+  <span class="ledger-values">
+   <input class="item-val first input-number" value="$40"/>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item ledger-cable">
+  <span class="item-name">Cable</span>
+  <span class="ledger-values">
+   <input class="item-val first input-number" value="$60"/>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item ledger-internet">
+  <span class="item-name">Internet</span>
+  <span class="ledger-values">
+   <input class="item-val first input-number" value="$45"/>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item highlight ledger-expenses" class="ledger-expenses">
+  <span class="item-name">Total</span>
+  <span class="ledger-values">
+   <span class="item-val first input-number">$-</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="content-page rate-risk">
+  <h3 class="section-header">
+   <a href="#">
+    <span class="section-title">Interest Rate Risk</span><span class="expand-section"></span><div class="section-desc">What would my payment be at higher interest rates?</div>
+  </a>
+</h3>
+<div class="section-content">
+ <p>When determining the size of home you can afford, it&#039;s important to look at the long term horizon. The mortgage rate you pay today could be substantially different from the mortgage rates available when the time comes to renew your mortgage.</p>
+ <p>The calculation below shows how much of your mortgage principal will be left at the end of the term.</p>
+
+ <div class="ledger-header">
+  <h4>Mortgage Amount</h4>
+  <div class="ledger-values">
+   <label for="scen_3">Scenario:</label>
+   <select id="scen_3" class="scenario">
+    <option value="0">1 (5.00% down)</option>
+    <option value="1">2 (10.00% down)</option>
+    <option value="2">3 (15.00% down)</option>
+    <option value="3">4 (20.00% down)</option>
+  </select>
+</div>
+</div>
+<ul class="ledger-items">
+  <li>
+   <div class="ledger-item ledger-mtg-today">
+    <span class="item-name">Mortgage amount today</span>
+    <span class="ledger-values">
+     <span class="item-val first">$-</span>
+   </span>
+   <span class="ledger-line"></span>
+ </div>
+</li>
+<li>
+ <div class="ledger-item indent ledger-mtg-paid">
+  <span class="item-name">Less: Principal paid off over term</span>
+  <span class="ledger-values">
+   <span class="item-val first">$-</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+<li>
+ <div class="ledger-item highlight ledger-mtg-eot">
+  <span class="item-name">Mortgage remaining at end of term:</span>
+  <span class="ledger-values">
+   <span class="item-val first">$-</span>
+ </span>
+ <span class="ledger-line"></span>
+</div>
+</li>
+</ul>
+
+<div class="interest-rate-examples">
+  <p class="first">Using this amount, below we calculate the corresponding mortgage payments at a variety of interest rates:</p>
+  <table>
+   <thead>
+    <tr>
+     <th colspan="2">Purchase interest rate</th>
+     <th class="payment">Payment<br/><span class="sub-head">Selected Scenario</span></th>
+   </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Selected Rate</td>
+   <td class="rate-value"></td>
+
+   <td class="payment first">$-</td>
+ </tr>
+ <tr>
+   <td>Average 5-year Fixed Rates (2000 - 2010)</td>
+   <td class="rate-value">3.89%</td>
+
+   <td class="payment first">$-</td>
+ </tr>
+ <tr>
+   <td>Average 5-year Fixed Rates (1990 - 2000)</td>
+   <td class="rate-value">7.23%</td>
+
+   <td class="payment first">$-</td>
+ </tr>
+ <tr>
+   <td>Average 5-year Fixed Rates (1980 - 1990)</td>
+   <td class="rate-value">11.92%</td>
+
+   <td class="payment first">$-</td>
+ </tr>
+</tbody>
+</table>
+</div>
+
+<p>Below is a graph that displays the approximate values of competitive 5-year fixed mortgage rates since 2006.</p>
+<div class="chart-wrapper chart-center">
+  <h2>5-year Fixed Mortgage Rates						</h2>
+  <div id="Chart_1xOZT" class="rh-chart" ></div>
+</div>
+
+</div>
+</div>
+<div class="content-page amortization">
+  <h3 class="section-header">
+   <a href="#">
+    <span class="section-title">Amortization Schedule</span><span class="expand-section"></span><div class="section-desc">What do my payments look like over time?</div>
+  </a>
+</h3>
+<div class="section-content">
+ <div class="ledger-values">
+  <label for="scen_4">Scenario:</label>
+  <select id="scen_4" class="scenario">
+    <option value="0">1 (5.00% down)</option>
+    <option value="1">2 (10.00% down)</option>
+    <option value="2">3 (15.00% down)</option>
+    <option value="3">4 (20.00% down)</option>
+  </select>
+</div>
+
+<div id="extension-amort">
+  <div id="extension-amort_chart" style="overflow:hidden;"></div>
+  <table class="amort-sched">
+   <thead>
+    <th class="year">Year</th>
+    <th>Total Paid</th>
+    <th>Principal Paid</th>
+    <th>Interest Paid</th>
+    <th>Balance</th>
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+</form>
+</div>
+</div>
+<div style="display:none">
+  <div id="RateSelector_L6FU7" class="rh-rate-selector ratehub">
+    <h1>Select rate</h1>
+    <form name="rs-filter">
+      <div class="row">
+        <label for="rs-type">Type:</label>
+        <select id="rs-type" name="t">
+          <option
+          value="1" selected="selected">  Fixed Rates</option>
+          <option
+          value="2">  Variable Rates</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="rs-term">Term:</label>
+        <select id="rs-term" name="y">
+          <option value="1">1 year</option>
+          <option value="2">2 years</option>
+          <option value="3">3 years</option>
+          <option value="4">4 years</option>
+          <option value="5" selected="selected">5 years</option>
+          <option value="6">6 years</option>
+          <option value="7">7 years</option>
+          <option value="8">8 years</option>
+          <option value="9">9 years</option>
+          <option value="10">10 years</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="rs-location">Location:</label>
+        <span class="rh-select">
+          <span class="rh-city-selector">
+            <input id="rs-location" name="location" required class="rh-city-select"
+            data-placeholder="Please select">
+          </span>
+        </span>
+      </div>
+    </form>
+    <table class="large-header small-header rate-display" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Provider</th>
+          <th>Rate</th>
+          <th>Select</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="rate-display-best">
+          <td class="loading" colspan="3"><img src="images/loading.gif"
+           alt="Loading..."/>Loading...</td>
+         </tr>
+         <tr class="rate-display-custom">
+          <td>Custom rate</td>
+          <td><input type="text" value="" maxlength="5" class="rh-input"/></td>
+          <td><a href="#" title="Select this rate">Select</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script id="rs-rate-template" type="text/x-jquery-tmpl">
+  <tr class="rate-display-best {{if sponsored }} sponsored {{/if}}">
+    <td>
+      <div class="rh-provider">
+        <span class="provider-logo"><img alt="${provider.name}" src="${ratehub.serverUri + provider.logo}?size=50"
+          /></span><span class="provider-name">${provider.name}</span>
+        </div>
+      </td>
+      <td>	<span class="rate-value">${Globalize.format(value, "n2")}<span class="percent-sign">%</span></span>
+      </td>
+      <td><a href="#" title="Select this rate">Select</a></td>
+    </tr>
+  </script>
+
+</div>
+
+
+
+
+<hr>
+<h2>
+Why use a mortgage payment calculator?  </h2>
+<p>
+When planning to buy a home, it's easy to focus on the headline figures, like the final purchase price or your overall mortgage amount. But in many way, the most relevant number for your mortgage will be your regular repayments. After all, your mortgage payments are the amount that you'll need to take from your pay cheque each month to keep your mortgage under control.  </p>
+<p>
+Using a mortgage payment calculator like the one above takes the guess work out of your mortgage payments. Our calculator lets you understand how much you'll need to pay each month for any size of mortgage, with any rate. This means you can compare homes and mortgage products with confidence, all the while knowing exactly how much you'll be on the hook for in each scenario.  </p>
+<h2>
+How to calculate mortgage payments  </h2>
+<p>
+  Calculating mortgage payments used to be complex, but mortgage payment calculators make it much easier. Our mortgage payment calculator gives you everything you need to test different scenarios, to help you decide what mortgage is right for you. <b>Here’s a little more information on how the calculator works.</b>  </p>
+  <h2>
+  The three numbers you'll need  </h2>
+  <p>
+  There are several factors that go into estimating how much your regular mortgage payments will be. These 3 numbers are particularly important:  </p>
+  <p>
+    <b>1. The total mortgage amount:</b> This is the price of your new home, less the down payment, plus mortgage insurance, if applicable.  </p>
+    <p>
+      <b>2. The amortization period:</b> This is the total life of your mortgage, and the number of years the mortgage payments will be spread across.  </p>
+      <p>
+        <b>3. The mortgage rate:</b> This is the rate of interest you pay on your mortgage.  </p>
+        <div class="rh-call-to-action"><div class="text">
+          <h3 class="title">
+          Make your calculator results a reality      </h3>
+          <p class="description">
+          Secure a great mortgage rate and lock in your monthly mortgage payment now.      </p>
+        </div><div class="call-to-action rate">
+          <span class="title">Best variable rates</span>
+          <span class="details">
+            <span class="rh-rate has-subtext">
+              <span>
+                0.99<sup>%</sup></span>
+                <div class="sub">
+                Prime - 1.46      </div>
+              </span><a class="rh-button" href="best-mortgage-rates/5-year/variable.html">
+              Compare Rates Now        </a></span>
+            </div>  </div>
+            <hr>
+            <h2 class="withDot">How to use the mortgage payment calculator</h2>
+            <p>
+            To use the calculator, start by entering the purchase price, then select an amortization period and mortgage rate. The calculator shows the best rates available in your province, but you can also add a different rate. The calculator will now show you what your mortgage payments will be.  </p>
+            <p>
+            By default, the mortgage payment calculator will show four different monthly payments, depending on the size of your down payment. It will automatically calculate the cost of CMHC insurance. You can change the size of your down payment and the payment frequency to see how your regular payment will be affected  </p>
+            <p>
+              Our calculator also shows you what the <a href="land-transfer-tax.html">land transfer tax</a> will be, and approximately how much cash you’ll need for closing costs. You can also use the calculator to estimate your total monthly expenses, see what your payments would be if mortgage rates go up, and show what your outstanding balance will be over time.  </p>
+              <p>
+              If you’re buying a new home, it’s a good idea to use the calculator to determine what you can afford before you start looking at real estate listings. If you’re renewing or refinancing and know the total amount of the mortgage, use the “Renewal or Refinance” tab to estimate mortgage payments without accounting for a down payment.  </p>
+              <h2 class="withDot">How to lower your mortgage payments</h2>
+              <p>
+              There are a few ways to lower your monthly mortgage payments. You can reduce the purchase price, make a bigger down payment, extend the amortization period, or find a lower mortgage rate. Use the calculator to see what your payment would be in different scenarios.  </p>
+              <p>
+                Keep in mind that if your down payment is less than 20%, your maximum amortization period is 25 years. As for finding a lower mortgage rate, it’s a good idea to speak to a <a href="mortgage-brokers-canada.html">mortgage broker</a> for assistance.  </p>
+                <hr>
+                <h2 class="withDot">Frequently Asked Questions</h2>
+                <h3>
+                Is your mortgage payment calculator free?  </h3>
+                <p>
+                Yes, our mortgage payment calculator is free. In fact, all of our calculators, articles, and rate comparison tables are free. Ratehub.ca earns revenue through advertising and commission, rather than by charging users. We promote the lowest rates in each province offered by brokers, and allow them to reach customers online.  </p>
+                <h3>
+                Why does your monthly calculator have four columns?  </h3>
+                <p>
+                We think it's important for you to compare your options side by side. We start the calculator by outlining the four most common options for down payment scenarios, but you are not limited to those options. We also allow you to vary amortization period as well as interest rates, so you'll know how a variable vs. fixed mortgage rate changes your payment.  </p>
+                <h3>
+                How do payments differ by province in Canada?  </h3>
+                <p>
+                Most mortgage regulation in Canada is consistent across the provinces. This includes the minimum down payment of 5%, and the maximum amortization period 35 years, for example. However, there are some mortgage rules that vary between provinces. This table summarizes the differences:  </p>
+                <table class="rh-table text">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>PST on CMHC insurance</th>
+                      <th>Land transfer taxes</th>
+                      <th>Land transfer rebate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>British Columbia</th>
+                      <td></td>
+                      <td>YES</td>
+                      <td>YES</td>
+                    </tr>
+                    <tr>
+                      <th>Alberta</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Saskatchewan</th>
+                      <td></td>
+                      <td>YES</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Manitoba</th>
+                      <td></td>
+                      <td>YES</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Ontario</th>
+                      <td>YES</td>
+                      <td>YES</td>
+                      <td>YES</td>
+                    </tr>
+                    <tr>
+                      <th>Quebec</th>
+                      <td>YES</td>
+                      <td>YES</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>New Brunswick</th>
+                      <td></td>
+                      <td>YES</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Nova Scotia</th>
+                      <td></td>
+                      <td>YES</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Prince Edward Island</th>
+                      <td></td>
+                      <td>YES</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>Newfoundland and Labrador</th>
+                      <td></td>
+                      <td>YES</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3>
+                What is CMHC Insurance?  </h3>
+                <p>
+                  CMHC insurance (or mortgage default insurance) protects lenders from mortgages that default. CMHC insurance is mandatory for all mortgages in Canada with down payments of less than 20% (high-ratio mortgages). This is an additional cost to you, and is calculated as a percentage of your total mortgage amount. For more information on mortgage default insurance rates, please read our guide to <a href="cmhc-mortgage-insurance.html">mortgage default insurance (CMHC insurance)</a>.  </p>
+                  <h3>
+                  What is an amortization schedule?  </h3>
+                  <p>
+                  An amortization schedule shows your monthly payments over time and also indicates the portion of each payment paying down your principal vs. interest. The maximum amortization in Canada is 25 years on down payments less than 20%. The maximum amortization period for all mortgages is 35 years.  </p>
+                  <p>
+                  Though your amortization may be 25 years, your term will be much shorter. With the most common term in Canada being 5 years, your amortization will be up for renewal before your mortgage is paid off, which is why our amortization schedule shows you the balance of your mortgage at the end of your term.   </p>
+                  <p>
+                    <a href="mortgage-term-vs-amortization.html">Learn more about the difference between mortgage amortization and terms here</a>.  </p>
+                    <h2 class="withDot">More mortgage calculators</h2>
+                    <div class="rh-link-block" style="overflow:auto;">
+                      <ul class="rh-list">
+                        <li><a href="mortgage-affordability-calculator.html">Mortgage affordability calculator</a></li>
+                        <li><a href="land-transfer-tax.html">Land transfer tax calculator</a></li>
+                        <li><a href="cmhc-mortgage-insurance.html">CMHC mortgage insurance calculator</a></li>
+                        <li><a href="mortgage-refinance-calculator.html">Mortgage refinance calculator</a></li>
+                        <li><a href="penalty-calculator.html">Mortgage penalty calculator</a></li>
+                        <li><a href="debt-consolidation-calculator.html">Debt consolidation mortgage calculator</a></li>
+                        <li><a href="mortgage-refinance-equity.html">Maximum equity mortgage refinance calculator</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </main>
+              <div class="l-split-right">
+                <aside>
+                  <div class="big-box">
+                    <div id="big-box-1"></div>
+                  </div>
+
+                  <ul class="rh-panels rh-panels-large">
+
+
+                    <li class="rh-panel collapsed">
+                      <a class="title" href="mortgage-calculators.html" data-panel="collapse-next">
+                        <i class="fa fa-fw rh-calculator"></i><span>Calculators</span><i class="fa fa-fw fa-chevron-up"></i><i class="fa fa-fw fa-chevron-down"></i>      </a>
+                        <ul class="rh-panels contents rh-panels-small">
+                          <li class="rh-panel collapsed">
+                            <a class="title" href="mortgage-calculators.html" data-panel="collapse-next">
+                              <span>Home Buying Calculators</span><i class="fa fa-fw fa-chevron-up"></i><i class="fa fa-fw fa-chevron-down"></i>      </a>
+                              <ul class="contents rh-check-list">
+                                <li class="checked">
+                                  <a href="mortgage-payment-calculator.html"><i class="fa fa-fw fa-check"></i><span>Payment Calculator</span>
+                                  </a>
+                                </li>
+                                <li >
+                                  <a href="mortgage-affordability-calculator.html"><i class="fa fa-fw fa-check"></i><span>Affordability Calculator</span>
+                                  </a>
+                                </li>
+                                <li >
+                                  <a href="land-transfer-tax.html"><i class="fa fa-fw fa-check"></i><span>Land Transfer Tax Calculator</span>
+                                  </a>
+                                </li>
+                                <li >
+                                  <a href="cmhc-mortgage-insurance.html"><i class="fa fa-fw fa-check"></i><span>Mortgage Insurance Calculator</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="rh-panel collapsed">
+                              <a class="title" href="mortgage-calculators.html" data-panel="collapse-next">
+                                <span>Refinancing Calculators</span><i class="fa fa-fw fa-chevron-up"></i><i class="fa fa-fw fa-chevron-down"></i>      </a>
+                                <ul class="contents rh-check-list">
+                                  <li >
+                                    <a href="mortgage-refinance-calculator.html"><i class="fa fa-fw fa-check"></i><span>Refinance Calculator</span>
+                                    </a>
+                                  </li>
+                                  <li >
+                                    <a href="penalty-calculator.html"><i class="fa fa-fw fa-check"></i><span>Penalty Calculator</span>
+                                    </a>
+                                  </li>
+                                  
+                                  <li >
+                                    <a href="mortgage-refinance-equity.html"><i class="fa fa-fw fa-check"></i><span>Maximum Equity Refinance Calculator</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+
+
+                        </ul>
+
+
+
+
+                        <div class="big-box">
+                          <div id="big-box-2"></div>
+                        </div>
+                      </aside>
+                    </div>
+                  </div>
+                </div>
+
+                <script type="text/javascript" src="ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <script type="text/javascript">
+                  window.ratehub = {"canonicalUrl":"\/mortgage-payment-calculator","serverUri":"https:\/\/www.ratehub.ca","requestPath":"\/mortgage-payment-calculator","pageType":"mortgages","displayVersion":2,"isWidget":false,"experiments":{"mortgages":{"mtgNonMonForm":0,"lenderComparison":0,"renewalCardRedirectStrategy":0,"purchaseLeadSubmitStrategy":0,"appCa":0},"creditcards":{"ccNonMonForm":0,"showIncomeColumn":1,"compareButton":0,"lowInterestCardFinder":1,"cardFinderCTAs":2,"ccSideNav":0},"chequing":{"chqTransactionsTest":0,"chqPFAIconTest":1},"savings":{"savingsAdditionalFeesTest":1,"savPFAIconTest":1},"gic":{"depSideNav":0,"gicPFAIconTest":1},"babe":{"lipstickOnAPig":10}},"analytics":{"ga":{"key":"UA-17477445-1"},"heap":{"key":"3993016571"},"googleTagManager":{"containerId":"GTM-MN8QRHD"},"visitorId":"1395530904595448910"},"colors":{"black":"#000000","white":"#FFFFFF","whiteTranslucent":"rgba(255, 255, 255, 0.95)","whiteTransparent":"rgba(255, 255, 255, 0)","blackberry":"black","blackberryLight":"#393939","coconut":"white","blueberry":"#00b5d6","blueberryLight":"#b2ecf7","blueberryDark":"#008299","blueberryLight50":"hsla(190, 81%, 83%, 0.5)","berry":"#00729e","berryLight":"#bbe4ef","berryDark":"#004f6e","mist":"#ecf6f8","mistLight":"#f5fafb","mistDark":"#e5eff1","yuzu":"#ffcc50","yuzuLight":"#fde4a7","yuzuDark":"#e5b747","lime":"#4ab879","limeLight":"#a7e8c2","limeDark":"#358255","tangerine":"#ff6e37","tangerineLight":"#f8a07f","tangerineDark":"#f0592f","watermelon":"#ff8f9a","watermelonLight":"#ffc7cc","watermelonDark":" #e5808a","strawberry":"#e71328","strawberryLight":"#fcf0f0","strawberryDark":"#b80f20","stone":"#c6d0d3","stoneLight":"#f7f9fa","stoneDark":"#6a787c"},"registrationFeeUrls":{"AB":"https:\/\/www.ratehub.ca\/land-transfer-tax-alberta","SK":"https:\/\/www.ratehub.ca\/land-transfer-tax-saskatchewan"},"rateTypes":{"1":[1,2,3,4,5,6,7,8,9,10,18,25],"2":[3,5],"3":[0]},"ads":{"tags":{"leaderboard-1":["\/57452754\/RH_ROS_728x90_Top_ATF",[728,90],"leaderboard-1"],"mobile-leaderboard-1":["\/57452754\/RH_ROS_320x50_ATF",[320,50],"mobile-leaderboard-1"],"sponsored-credit-cards":["\/57452754\/RH_FEAT_CC_1x1",[1,1],"sponsored-credit-cards"],"sponsored-mortgages":["\/57452754\/RH_FEAT_MTG_1x1",[1,1],"sponsored-mortgages"],"sponsored-gics":["\/57452754\/RH_FEAT_GIC_1x1",[1,1],"sponsored-gics"],"sponsored-savings":["\/57452754\/RH_FEAT_SAV_1x1",[1,1],"sponsored-savings"],"big-box-1":["\/57452754\/RH_ROS_300x250_ATF",[300,250],"big-box-1"],"big-box-2":["\/57452754\/RH_ROS_300x250_BTF",[[300,250],[300,600]],"big-box-2"],"big-box-content":["\/57452754\/RH_ROS_300x250_Content",[300,250],"big-box-content"],"big-box-content-2":["\/57452754\/RH_ROS_300x250_Content_2",[300,250],"big-box-content-2"],"leaderboard-content":["\/57452754\/RH_ROS_728x90_Content",[728,90],"leaderboard-content"],"leaderboard-content-2":["\/57452754\/RH_ROS_728x90_Content_2",[728,90],"leaderboard-content-2"],"mobile-leaderboard-content":["\/57452754\/RH_320x50_Content",[320,50],"mobile-leaderboard-content"],"mobile-leaderboard-content-2":["\/57452754\/RH_320x50_Content_2",[320,50],"mobile-leaderboard-content-2"],"leaderboard-2":["\/57452754\/RH_ROS_728x90_Bottom_BTF",[728,90],"leaderboard-2"],"mobile-leaderboard-2":["\/57452754\/RH_ROS_320x50_BTF",[320,50],"mobile-leaderboard-2"],"skin":["\/57452754\/RH_ROS_SKIN_1x1",[[1,1],[1000,1000]],"skin"]},"targeting":{"section":["payment-calculator","calculators","mortgages"]},"exclusions":["\/blog\/porting-or-transferring-your-mortgage\/","#\/blog\/5-ways-to-pay-off-your-mortgage-early\/","#\/blog\/renting-vs-buying-what-to-consider\/","blog\/review-eq-bank-savings-plus-account\/"]},"features":{"sumome":true,"zopim":false,"optimizer":true},"mapsKey":"AIzaSyBJxz04g2iWoWuUU187XrNbPoI0aJSv95g","csrf":"PxmpmNLTgUKqHFDED32YEfpREkgXuIwJGQNyRUZ5","user":{"browser":{"mobile":false},"location":{"id":4190,"name":"Toronto","slug":"toronto","status":"default","province":{"code":"ON","full_name":"Ontario","common_name":"Ontario","sort_order":5,"slug":"ontario","timezone":"America\/Toronto","principal_city":{"id":4190,"name":"Toronto","slug":"toronto","status":"default","province":[],"latitude":43.6666984558105,"longitude":-79.4167022705078}},"latitude":43.6666984558105,"longitude":-79.4167022705078},"language":"en","aff_info":null},"controls":{"Chart_1xOZT":{"options":"var options = jQuery.extend(true, {\n\tchart: {\n\t\tbackgroundColor: 'transparent',\n\t\tstyle: {\n\t\t\tfontFamily: 'inherit',\n\t\t},\n\t\tspacingLeft: 3,\n\t\tspacingRignt: 3,\n\t},\n\tcolors: [\n\t\t'#00b5d6',\n\t\t'#ff6e37',\n\t\t'#4ab879',\n\t\t'#00729e',\n\t\t'#ffcc50',\n\t\t'#ff8f9a',\n\t\t'',\n\t],\n\txAxis: {\n\t\ttype: 'datetime',\n\t\tgridLineWidth: 0,\n\t\tgridLineColor: '#c6d0d3',\n\t\tlineWidth: 2,\n\t\tlineColor: 'black',\n\t\ttickLength: 0,\n\t\tlabels: {\n\t\t\tstyle: {\n\t\t\t\tcolor: 'black',\n\t\t\t\tfontFamily: 'inherit',\n\t\t\t\tfontSize: '1em',\n\t\t\t\tfontWeight: '500',\n\t\t\t},\n\t\t\ty: 26\n\t\t},\n\t\tminPadding: 0,\n\t\tmaxPadding: 0\n\t},\n\tyAxis: {\n\t\tgridLineWidth: 1,\n\t\tgridLineColor: '#c6d0d3',\n\t\tlineWidth: 0,\n\t\tlineColor: 'black',\n\t\tlabels: {\n\t\t\tstyle: {\n\t\t\t\tcolor: 'black',\n\t\t\t\tfontFamily: 'inherit',\n\t\t\t\tfontSize: '1em',\n\t\t\t\tfontWeight: '500',\n\t\t\t},\n\t\t\tformatter: function() {\n\t\t\t\treturn this.value + '%';\n\t\t\t},\n\t\t\tx: -16,\n\t\t}\n\t},\n\tlegend: {\n\t\tlayout: 'horizontal',\n\t\talign: 'center',\n\t\tborderWidth: 0,\n\t\ty: 0,\n\t\tmargin: 20,\n\t\titemStyle: {\n\t\t\tfontFamily: 'inherit',\n\t\t\tfontWeight: 400,\n\t\t},\n\t},\n\tplotOptions: {\n\t\tseries: {\n\t\t\tmarker: {\n\t\t\t\tradius: 0\n\t\t\t},\n\t\t\tshadow: false\n\t\t},\n\t\tarea: {\n\t\t\tfillOpacity: 0.3,\n\t\t\tpointPlacement: 'on'\n\t\t}\n\t},\n\ttooltip: {\n\t\tformatter: function() {\n\t\t\tvar date = new Date(this.x);\n\t\t\treturn '<b>'+ this.series.name +'<\/b><br\/>' +\n\t\t\t\t\tGlobalize.format(date, 'yyyy-MM-dd') + ': ' +\n\t\t\t\t\tHighcharts.numberFormat(this.y, 2, '.', ',') + '%';\n\t\t},\n\t\tstyle: {\n\t\t\tfontFamily: 'inherit',\n\t\t},\n\t},\n\tcredits: { enabled: false }\n}, {\n\ttitle: { text: \"5-Year Fixed Mortgage Rates\" },\n\txAxis: {\n\t\ttype: \"datetime\",\n\t\ttitle: { text: null }\n\t},\n\tyAxis: {\n\t\ttitle: { text: '' }\n\t},\n\tseries: [\n\t\t{\n\t\t\tname: Globalize.localize('discounted-mortgage-rates'),\n\t\t\tdata: 'best.5y-fixed'\n\t\t},\n\t\t{\n\t\t\tname: Globalize.localize('maximum-title'),\n\t\t\tdata: 'best.5y-fixed.max'\n\t\t},\n\t\t{\n\t\t\tname: Globalize.localize('minimum-title'),\n\t\t\tdata: 'best.5y-fixed.min'\n\t\t},\n\t\t{\n\t\t\tname: Globalize.localize('average-title'),\n\t\t\tdata: 'best.5y-fixed.mean'\n\t\t}\n\t]\n}\n);","delayed":true,"id":"Chart_1xOZT","__class":"Chart"},"RateSelector_L6FU7":{"operation":"getCalculatorRates","callbackUrl":"https:\/\/www.ratehub.ca\/mortgage-payment-calculator?callback=?","y":5,"t":1,"scenario":"purchase","provider":null,"showLowest":5,"liveInProperty":true,"id":"RateSelector_L6FU7","__class":"RateSelector"}},"strings":{"messages":{"close":"Close","unknown-err-msg":"An unknown error has occurred. Please get in touch using the 'Contact Us' link at the bottom of the page.","blank-email-err-msg":"Email must not be blank.","blank-username-err-msg":"Username must not be blank.","invalid-email-err-msg":"That email address is not valid.","blank-password-err-msg":"Password must not be blank.","blank-firstname-err-msg":"First name must not be blank.","blank-lastname-err-msg":"Last name must not be blank.","user-exists-err-msg":"That email address is already registered. Please provide a different one.","alt-user-exists-err-msg":"That email address is already registered. Please login above or create a new account.","incorrect-login-err-msg":"Incorrect username or password.","incorrect-password-err-msg":"That password is incorrect.","auth-revoke-err-msg":"Unable to revoke authentication.","validation-err-msg":"Unable to validate user.","user-not-registered-msg":"That email address is not registered with us.","passwords-match-err-msg":"Those new passwords do not match.","token-retrieve-err-msg":"Unable to retrieve token.","password-reset-err-msg":"Unable to reset password.","token-validate-err-msg":"Unable to validate token.","change-email-err-msg":"Unable to change e-mail.","disable-account-err-msg":"Unable to disable account.","re-enable-account-err-msg":"Unable to re-enable account.","account-disabled":"That account has been disabled","account-not-verified":"The user's account has not been verified","domain-key-invalid":"The domain key passed to the auth service is incorrect","email-does-exist":"That email account does not exist","email-exists":"That email account exists already","exception":"An unhandled error has occured","forgot-token-invalid":"The forgot token is invalid","invalid-credentials":"The email address or password is incorrect","no-such-email":"The email address does not exist","password-mismatch":"The passwords don't match","token-invalid-or-expired":"The reset password token is invalid or has expired","user-disabled":"The user account has been disabled","user-exists":"The user already exists","passwords-space-err-msg":"Password must be minimum 8 characters, with no spaces.","asking-price-title":"Asking Price","mortgage-amount-title":"Mortgage Amount","maximum-amortization-period-adjusted-your-selection":"The maximum amortization period is 25 years for mortgages with less than 20% down. We have adjusted your selection.","maximum-amortization-period-adjusted-your-selection-to-35":"The maximum amortization period is 35 years for mortgages with 20% or more down. We have adjusted your selection.","details-title":"Details","montreal-rebate-info-url":"http:\/\/ville.montreal.qc.ca\/portal\/page?_pageid=9437,116689570&_dad=portal&_schema=PORTAL","calc-required-to-pay-fees-format":"You may be required to pay <a href=\"%1$s\">title transfer fees<\/a>.","please-complete-the-input-for-the-selected-scenario-in-order-to-continue":"Please complete the input for the selected scenario in order to continue.","percent-down":"%1$s down","discounted-mortgage-rates":"Discounted Mortgage Rates","maximum-title":"Maximum","minimum-title":"Minimum","average-title":"Average","amortization-content-1":"The highlighted line above displays the totals at the end of your mortgage term. At this time, you will renew your mortgage and choose among the rates that are available. The following analysis assumes you will lock in the same rate for the remainder of the amortization period which may not be possible.","total-title":"Total","term-title":"Term","amort-schedule-title":"Amortization Schedule","thank-you-title":"Thank you!"}}};  </script>
+                    <script type="text/javascript" src="assets/js/appde4f.js?v=2fc277b5"></script>
+                    <script type="text/javascript" src="assets/js/controlscbbd.js?v=f6e434b8"></script>
+                    <script type="text/javascript" src="js/calculators74e9.js?v=231541f0"></script>
+                    <script type="text/javascript" src="js/mortgages74e9.js?v=231541f0"></script>
+                    <script type="text/javascript" src="vendor/colorbox/jquery.colorbox74e9.js?v=231541f0"></script>
+                    <script type="text/javascript" src="ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+                    <script type="text/javascript">
+
+                      jQuery('form').append('<input type="hidden" name="_token" value="PxmpmNLTgUKqHFDED32YEfpREkgXuIwJGQNyRUZ5">');
+
+                      window.initSelects = function(el) {
+                        var allowSearch;
+                        if (el.id.indexOf("city") !== -1 || el.id.indexOf("province") !== -1) {
+                          allowSearch = true;
+                        } else {
+                          allowSearch = false;
+                        }
+
+                        if (isMobileDevice()) {
+                          allowSearch = false;
+                        }
+
+                        $(el)
+                        .wrap('<span class="rh-select"></span>')
+                        .select2({
+                          minimumResultsForSearch: !allowSearch ? -1 : null,
+                          width: "resolve",
+                          attachToBody: !isWidgetView($(el))
+                        });
+
+    // $(el).on('select2-opening', function(event) {
+    //  if (isMobileDevice()) {
+    //      initiateStandardMobileOptionPicking(el, event);
+    //  }
+    // });
+
+    var arrow = '<i class="fa fa-caret-down"></i>';
+    $(el).next().find(".chosen-single div").html(arrow);
+  };
+
+  jQuery(function($) {
+    // icheck
+    if (!isMobileDevice()) {
+      $('.ratehub-calc input[type="checkbox"]')
+      .wrap('<span class="rh-checkbox-container"></span>')
+      .iCheck({insert: '<i class="fa fa-square"></i><i class="fa fa-check-square"></i>'})
+      .on('ifChanged', function(event) {
+        $(this).change();
+      })
+      .on('change', function(event) {
+        $(this).iCheck('update');
+      });
+    }
+
+    // select2
+    if ($.fn.select2 && $.fn.select2.ratehub) {
+      $(".rh-calc-wrapper select").each(function() {
+        initSelects(this);
+      });
+    }
+  });
+
+  window.ratehubUrl = "index.html";
+
+  if (typeof window.isRatehubLoap !== 'function') {
+    window.isRatehubLoap = function() { return false; }
+  }
+
+  jQuery(function($) {
+   var context_tips = $("#payment-calc .calc-tip-wrapper");
+   if (typeof(isMobileView) === 'function' && isMobileView()) {
+    $('.calc-tip-wrapper').hide();
+  }
+
+  window.updateCalculations = function updateCalculations() {
+    var city, provinceCode;
+    if ($("#rh-calc-province").length) {
+     provinceCode = $("#rh-calc-province").val();
+     if ($("#rh-calc-city").data('value')) {
+      var city = $("#rh-calc-city").data('value').slug;
+    } else {
+      var city = $("#rh-calc-city").val();
+    }
+  } else if ($("#ltt-location").length && $("#ltt-location").data("select2")) {
+   var location = $("#ltt-location").select2("data");
+   var city = location.slug;
+   if (location.province) {
+    provinceCode = location.province.code;
+  }
+}
+if (!city || !provinceCode) {
+ var location = ratehub.user.location;
+ city = location.slug;
+ provinceCode = location.province.code;
+}
+
+var clear = false;
+
+var ask = getDollarValue($("#ask"));
+if (isNaN(ask) || ask == null)
+ clear = true;
+
+var dp_pcs = $("#payment-calc form .downpayment input[name='dp_pc[]']");
+var dp_dols = $("#payment-calc form .downpayment input[name='dp_dol[]']");
+var cmhcs = $("#payment-calc form .cmhc .col4");
+var tots = $("#payment-calc form .total .col4");
+
+var amorts = $("#payment-calc form select[name='amort[]'], #payment-calc form input[name='amort[]']");
+var rates = $("#payment-calc form .mortgage-rate .rate-value");
+var payments = $("#payment-calc form .total-mortgage-payment .amount");
+
+var fthb = $("#fthb").is(":checked");
+var pcp = $("#pcp").is(":checked");
+
+var purchase = $('#payment-calc tbody.purchase').is(':visible');
+
+var notifiedAmortChange = false;
+for (var i = 0; i < amorts.length; i++) {
+ if (purchase) {
+  var dollarsElement = $(dp_dols[i]);
+  var percentElement = $(dp_pcs[i]);
+
+  var dollars = getDollarValue(dollarsElement);
+  var percent = percentElement.data("unrounded");
+
+  var askChanged = $("#ask").data("askChanged");
+  var usingScenarioDefault = dollarsElement.data("scenarioDefault");
+  if (usingScenarioDefault === undefined) {
+   dollarsElement.data("scenarioDefault", true);
+
+   const isLoap = isRatehubLoap();
+   if (isLoap) {
+    percentElement.css("color", ratehub.displayVersion === 1 ? "#000" : "#0a596b");
+  }
+}
+
+				// calculate minimum and default (for a given scenario) downpayments for <1M and >=1M since >=1M are no longer insurable
+				var minimumDown = 0.05 * ask;
+				if (ask >= 1000000) minimumDown = 0.2 * ask;
+				var scenarioDefault = minimumDown + 0.05 * i * ask;
+				if (ask > 500000 && ask < 1000000 && scenarioDefault === minimumDown) {
+					minimumDown = scenarioDefault = 25000 + 0.1 * (ask - 500000);
+				}
+
+				// adjust downpayment dollar or percent value, depending on what the user has set
+				if (dollarsElement.data("setbyuser")) {
+					if (dollars < minimumDown || usingScenarioDefault && askChanged) {
+						dollars = usingScenarioDefault ? scenarioDefault : minimumDown;
+					} else if (dollars > ask) {
+						dollars = ask
+					}
+					percent = dollars / ask;
+					setDollarValue(dollarsElement, dollars);
+					percentElement.data("unrounded", percent);
+					setPercentValue(percentElement, percent, "p2");
+				} else {
+					minimumPercent = minimumDown / ask;
+					scenarioDefaultPercent = scenarioDefault / ask;
+					if (percent < minimumPercent || usingScenarioDefault && askChanged) {
+						percent = usingScenarioDefault ? scenarioDefaultPercent : minimumPercent;
+					}
+					dollars = ask * percent;
+					percentElement.data("unrounded", percent);
+					setPercentValue(percentElement, percent, "p2");
+					setDollarValue(dollarsElement, dollars);
+				}
+				if (dollars) dollarsElement.data("scenarioDefault", Math.round(dollars) == Math.round(scenarioDefault));
+
+				// enable or disable long amortization periods based on downpayment
+				if (percent < 0.2) {
+					$(amorts[i]).find('option[value=30], option[value=35]').attr('disabled', true);
+				} else {
+					$(amorts[i]).find('option[value=30], option[value=35]').attr('disabled', false);
+				}
+
+				var amortSelect = $(amorts[i]);
+				if (percent < 0.2) {
+					if (amortSelect.val() > 25) {
+						amortSelect.val(25).change();
+						if (!notifiedAmortChange) {
+							alert(Globalize.localize('maximum-amortization-period-adjusted-your-selection'));
+							notifiedAmortChange = true;
+						}
+
+					}
+				} else if (percent >= 0.2) {
+					if (amortSelect.val() > 35) {
+						amortSelect.val(35).change();
+						if (!notifiedAmortChange) {
+							alert(Globalize.localize('maximum-amortization-period-adjusted-your-selection-to-35'));
+							notifiedAmortChange = true;
+						}
+
+					}
+				}
+			} else {
+				$(amorts[i]).find('option[value=30]').attr('disabled', false);
+				$(amorts[i]).find('option[value=35]').attr('disabled', true);
+			}
+		}
+		$("#ask").data("askChanged", false);
+
+		var homePrice = ask;
+		if ($(".ratehub-calc .land-transfer-tax").length) {
+			if (!clear) {
+				var prov_ltt = provincial_ltt(provinceCode, homePrice);
+				$(".ratehub-calc .provincial div").text(Globalize.format(prov_ltt, 'c0'));
+				var muni_ltt = municipal_ltt(provinceCode, city, homePrice);
+				$(".ratehub-calc .municipal div").text(Globalize.format(muni_ltt, 'c0'));
+
+				var rebate = ltt_rebate(provinceCode, city, fthb, homePrice, pcp);
+				if (rebate !== null) {
+					$(".ratehub-calc .rebate div").text(Globalize.format(rebate, 'c0'));
+				} else if (rebate === null && in_montreal(city)) {
+					$(".ratehub-calc .rebate div").html('<a href="' + Globalize.localize('montreal-rebate-info-url') + '" target="_blank">' + Globalize.localize('details-title') + '</a>')
+				}
+
+				var ltt_total = prov_ltt + muni_ltt - rebate;
+				$(".ratehub-calc .rh-title span").text(Globalize.format(ltt_total, 'c0'));
+
+				var registration_fees = registration_fee(provinceCode, homePrice, mortgageAmount)
+				if (registration_fees === null || registration_fees > 0) {
+					$(".ratehub-calc .fees td").html(sprintf(Globalize.localize('calc-required-to-pay-fees-format'), ratehub.registrationFeeUrls[provinceCode])).show();
+				} else {
+					$(".ratehub-calc .fees td").hide();
+				}
+			} else {
+				$(".ratehub-calc .provincial div").text("");
+				$(".ratehub-calc .municipal div").text("");
+				$(".ratehub-calc .rebate div").text("");
+				$(".ratehub-calc .rh-title span").text("$-");
+				$(".ratehub-calc .fees td").hide();
+			}
+		}
+
+		var scenarioSelectors = $('#calc_extension select.scenario');
+
+		for (var i = 0; i < amorts.length; i++) {
+			if (!clear) {
+
+				var dollars = 0;
+				var cmhc = 0;
+
+				var amortizationPeriod = parseInt($(amorts[i]).val(), 10);
+				if (isNaN(amortizationPeriod) && context_tips.find('.active').length && !context_tips.filter('.calc-tip-step2').children('.active').length) {
+					context_tips.find('.active').removeClass('active');
+					context_tips.filter('.calc-tip-step2').children().addClass('active');
+
+					if (typeof(window.isMobileView) === 'function' && isMobileView() && $.fn.select2 && $.fn.select2.ratehub) {
+						$(amorts[0]).select2('container').find('.select2-focusser').focus();
+					}
+				} else if (!isNaN(amortizationPeriod) &&
+          (context_tips.filter('.calc-tip-step2').children('.active').length || context_tips.filter('.calc-tip-step1').children('.active').length)) {
+					context_tips.find('.active').removeClass('active');
+					context_tips.filter('.calc-tip-step3').children('.calc-tip').addClass('active');
+
+					if (typeof(isMobileView) === 'function' && isMobileView()) {
+						$($("#payment-calc form .mortgage-rate .rate-selector")[0]).focus();
+					}
+				}
+
+				if (purchase) {
+					var dollarsElement = $(dp_dols[i]);
+					var percentElement = $(dp_pcs[i]);
+
+					var dollars = getDollarValue(dollarsElement);
+					var percent = percentElement.data("unrounded");
+
+					var mortgageAmount = ask - dollars;
+
+					if (cmhcs.length) {
+						var cmhc1 = cmhc_premium(1 - percent);
+						var cmhc2 = cmhc_surcharge(1 - percent, amortizationPeriod);
+						cmhc = mortgageAmount * (cmhc1 + cmhc2);
+						$(cmhcs[i]).text(Globalize.format(cmhc, 'c0'));
+					}
+				}
+
+				scenarioSelectors.find('option[value='+i+']').text((i+1) + (purchase ? " (" + sprintf(Globalize.localize('percent-down'), Globalize.format(percent, 'p2')) + ')' : ''));
+
+				var mortgageTotal = ask - dollars + cmhc;
+				if (tots.length)
+					$(tots[i]).text(Globalize.format(mortgageTotal, 'c0'));
+
+				if (!isNaN(amortizationPeriod) && rates.length && payments.length) {
+					var rate = $(rates[i]).data("rate");
+					var mortgageRate = rate != null ? (rate.value / 100).round(4) : null;
+					var mortgageTerm = rate != null ? rate.term : null;
+
+					var freq = $("#freq").val().split(",");
+					freq[0] = parseInt(freq[0], 10);
+					freq[1] = parseInt(freq[1], 10);
+					var payment = can_mortgage_payment(mortgageTotal, mortgageRate, amortizationPeriod, freq[0], freq[1]);
+					if (!isNaN(payment)) {
+						if (getDollarValue($(payments[i])) != Math.round(payment)) {
+							var box = $(payments[i]).css("opacity", "0").fadeTo(750, "1").text(Globalize.format(payment, 'c0')).parent().addClass('active');
+							if (!rate.provider)
+								box.addClass('simple');
+							else
+								box.removeClass('simple');
+						}
+
+						if ($('#calc_extension').is(':visible'))
+							updateCalculatorExtension(i, ask, dollars, cmhc, mortgageTotal, ltt_total, null, null, payment, null, null, null, mortgageRate, mortgageTerm, amortizationPeriod, freq, provinceCode);
+
+						var activeIndex = context_tips.index(context_tips.find('.active').parent());
+						if (activeIndex >= 0 && activeIndex < 3) {
+							context_tips.find('.active').removeClass('active');
+							setTimeout(function() {
+								context_tips.filter('.calc-tip-step4').children('.calc-tip').addClass('active');
+								context_tips.filter('.calc-tip-step5').children('.calc-tip').addClass('active');
+								setTimeout(function() { context_tips.filter('.calc-tip-step4').children().removeClass('active'); }, 10000);
+							}, 1000);
+						}
+					}
+				}
+			} else {
+				$(dp_dols[i]).val(null);
+				$(cmhcs[i]).text("");
+				$(tots[i]).text("$-");
+
+				//clearSelectedRates();
+				clearPayments();
+
+				if (typeof clearCalculatorExtension == 'function') {
+					clearCalculatorExtension(i, true);
+				}
+			}
+		}
+
+		scenarioSelectors.trigger('change.select2');
+	};
+
+	function updateProvince(provinceCode) {
+		if (provinceCode != "ON" && provinceCode != "BC" && provinceCode != "PE") {
+			$(".fthb").css("visibility", "hidden");
+		} else {
+			$(".fthb").css("visibility", "visible");
+		}
+
+		if (provinceCode != "BC") {
+			$(".pcp").css("visibility", "hidden");
+		} else {
+			$(".pcp").css("visibility", "visible");
+		}
+	};
+
+	$('#payment-calc .rh-calc-head .col03 a').click(function(event) {
+		event.preventDefault();
+		$(".ratehub-calc form").submit();
+	});
+
+	$("#rh-calc-province").change(function(event) {
+		if (context_tips.filter('.calc-tip-step4').children('.active').length) {
+			context_tips.filter('.calc-tip-step4').children().removeClass('active');
+		}
+
+		updateProvince($(this).val());
+	});
+
+	$("#ltt-location").change(function(event) {
+		if (context_tips.filter('.calc-tip-step4').children('.active').length) {
+			context_tips.filter('.calc-tip-step4').children().removeClass('active');
+		}
+
+		var location = $(this).select2("data");
+		updateProvince(location.province.code);
+	});
+
+	$("#payment-calc .rh-calc-tabs .rh-holder a").click(function(event) {
+		event.preventDefault();
+
+    var allRateSelectors = $('.rh-rate-selector');
+    if(allRateSelectors[0]) {
+      var rateSelectorControl = rh.Control.get(allRateSelectors[0]);
+    }
+
+    if (!$(this).hasClass("selected")) {
+     $("#payment-calc .rh-calc-tabs .rh-holder").removeClass("selected");
+     $(this).parent().parent().addClass("selected");
+
+     var purchaseOnlySections = $('#payment-calc #calc_extension').find('.cash-needed, .monthly-expenses, .rate-risk');
+     if ($(this).hasClass("purchase")) {
+      $("#payment-calc .col01 h3").text(Globalize.localize("asking-price-title")).parent().parent().find("label").text(Globalize.localize("asking-price-title"));
+      $("#payment-calc tbody.purchase").show();
+
+      if ($("#payment-calc.small, #payment-calc.tiny").length) {
+       $("#payment-calc tbody.land-transfer-tax").last().show();
+     } else {
+       $("#payment-calc tbody.land-transfer-tax").first().show();
+     }
+     $("#payment-calc #calc_extension").show();
+     $("#payment-calc .calc-tip-step1").find('.content-renew').hide().end().find('.content-purchase').show();
+
+     if(rateSelectorControl)
+      rateSelectorControl.options.scenario = "purchase";
+
+    purchaseOnlySections.show();
+  } else {
+    $("#payment-calc .col01 h3").text(Globalize.localize("mortgage-amount-title")).parent().parent().find("label").text(Globalize.localize("mortgage-amount-title"));
+    $("#payment-calc tbody.purchase").hide();
+    $("#payment-calc tbody.land-transfer-tax").hide();
+
+    $("#payment-calc .calc-tip-step1").find('.content-purchase').hide().end().find('.content-renew').show();
+
+    if(rateSelectorControl)
+      rateSelectorControl.options.scenario = "renew";
+
+    purchaseOnlySections.hide();
+  }
+
+  calculatorResized();
+
+  updateCalculations();
+}
+});
+
+	$('#payment-calc .calc-tip-close').click(function(event) {
+		event.preventDefault();
+		$(this).parents('.calc-tip').removeClass('active');
+	});
+
+	$('#calc_extension .section-header a').click(function(event) {
+		if (context_tips.filter('.calc-tip-step5').children('.active').length) {
+			context_tips.find('.active').removeClass('active');
+		}
+	});
+
+	$('#payment-calc .calc-tip-step1 .calc-tip').addClass('active');
+
+	
+	updateProvince(ratehub.user.location.province.code);
+
+	// trigger initial calculations
+ updateCalculations();
+});
+
+
+jQuery(function($) {
+	function widgetResized($) {
+		var calc = $('#payment-calc');
+
+		var windowWidth = $(window).width();
+		var previousWidth = calc.data('width');
+		if (!previousWidth || windowWidth != previousWidth) {
+			calc.data('width', windowWidth);
+		} else {
+			return;
+		}
+
+		var totals = calc.find('.rh-calc-main .total .col4');
+		var ltt = calc.find('.land-transfer-tax');
+		var prov = calc.find('#rh-calc-province');
+		var city = calc.find('#rh-calc-city');
+		var location = calc.find('#ltt-location').parent().parent();
+		var fthb = calc.find('#fthb');
+		var pcp = calc.find('#pcp');
+
+		if (fthb.parent().parent().is('.rh-checkbox-container')) {
+			fthb = fthb.parent().parent();
+		}
+
+		if (pcp.parent().parent().is('.rh-checkbox-container')) {
+			pcp = pcp.parent().parent();
+		}
+
+		var ext = calc.find('#calc_extension');
+
+		var width = calc.parent().width();
+		if (width) {
+			calc.removeClass('tiny').removeClass('small').removeClass('reduced').removeClass('full');
+			totals.removeClass('last');
+
+			// widths should be kept in line with content.css
+			if (width < 640) {
+				$(ltt[0]).hide();
+				$(ltt[1]).show();
+
+				ltt = $(ltt[1]);
+				if (prov.length) {
+					prov.appendTo(ltt.find('.profile .col4')[0]);
+					city.appendTo(ltt.find('.profile .col4')[1]);
+					fthb.appendTo(ltt.find('.profile .col4')[2]);
+					pcp.appendTo(ltt.find('.profile .col4')[3]);
+
+				} else {
+					location.appendTo(ltt.find('.profile .col4')[0]);
+					fthb.appendTo(ltt.find('.profile .col4')[1]);
+					pcp.appendTo(ltt.find('.profile .col4')[2]);
+				}
+
+				if (window != window.top) {
+					$('.calc-tip-wrapper').hide();
+				}
+
+				var cutoff = prov.length ? 2 : 1;
+				if (width < 450) {
+					calc.addClass('tiny');
+					$(totals[0]).addClass('last');
+					ltt.find('.rh-col').attr('colspan', 4);
+					ltt.find('.provincial, .municipal, .rebate').find('.col4').attr('colspan', 1);
+					ltt.find('.profile .col1').each(function(i, element) {
+						$(element).attr('colspan', i >= cutoff ? 3 : 2);
+					});
+				} else {
+					calc.addClass('small');
+					$(totals[1]).addClass('last');
+					ltt.find('.rh-col').attr('colspan', 5);
+					ltt.find('.provincial, .municipal, .rebate').find('.col4').attr('colspan', 2);
+					ltt.find('.profile .col1').each(function(i, element) {
+						$(element).attr('colspan', i >= cutoff ? 4 : 3);
+					});
+				}
+			} else {
+				$(totals[3]).addClass('last');
+				$(ltt[1]).hide();
+				$(ltt[0]).show();
+
+				ltt = $(ltt[0]);
+				if (prov.length) {
+					prov.insertAfter(ltt.find('label[for=rh-calc-province]'));
+					city.insertAfter(ltt.find('label[for=city]'));
+				} else {
+					location.insertAfter(ltt.find('label[for=ltt-location]'));
+				}
+				fthb.insertAfter(ltt.find('label[for=fthb]'));
+				pcp.insertAfter(ltt.find('label[for=pcp]'));
+
+				if (width < 690) {
+					calc.addClass('reduced');
+				} else {
+					calc.addClass('full');
+				}
+			}
+		}
+	}
+
+	widgetResized($);
+	$(window).resize(function(event) {
+		widgetResized($);
+	});
+});
+
+
+
+
+$("form select[name='amort[]']").change(function(event) {
+  var amort = $(event.currentTarget);
+  var newValue = amort.val();
+  if (newValue == 'other') {
+   if ($(this).select2) {
+    $(this).select2('destroy');
+  }
+  replaceElement(this, amort.data("undoValue"));
+} else {
+ amort.data("undoValue", newValue);
+}
+});
+
+			// Creates a textfield and places it in the specified location in the DOM
+			function createTextfield(parent, sibling, id, name, value) {
+				var element = document.createElement('input'); // cretes an input element but not placed on the document yet
+				element.type = 'text'; // specifies that the input element is a textfield
+				element.size = 10; // specifies the size of the textfield
+				element.className = 'text';
+				id ? element.id = id : null; // sets its id
+				name ? element.name = name : null; // sets its name
+				value ? element.value = value : null; // sets its value
+				$(element).keyup( function() { 
+					element.value = element.value.replace(/(\D)|^0$/g, ""); // replaces user input onkeyup only allowing numbers as inputs
+					updateCalculations();
+				});
+				sibling ? $(sibling).before(element) : $(parent).append(element); // places the textfield in the DOM
+				return element;
+			}
+
+			// Replaces an element with a textfield where the old element was located
+			function replaceElement(element, value) {
+				var parent = element.parentNode;
+				var sibling = element.nextSibling;
+				var id = element.id;
+				var name = element.name;
+				$(element).detach();
+				var text = createTextfield(parent, sibling, id, name, value);
+				$(element).trigger("replaced", [text]);
+			}
+
+
+      jQuery(function($) {
+       $('#calc_extension .section-header a')
+       .click(function(event) { event.preventDefault(); })
+       .find('.expand-section').parent()
+       .click(function(event) {
+        if (!window.calcExtensionInit) {
+         alert(Globalize.localize("please-complete-the-input-for-the-selected-scenario-in-order-to-continue"));
+         return;
+       }
+
+       toggleSectionVisibility($(this));
+     })
+       .parent().next().hide();
+
+       window.toggleSectionVisibility = function toggleSectionVisibility(anchor, op) {
+        if ((op == null || op == 'expand') && anchor.find('.expand-section').length) {
+         var expando = anchor.find('.expand-section');
+         expando.removeClass('expand-section');
+         anchor.parent().next().slideDown('slow', function() {
+          expando.addClass('collapse-section');
+          var section = anchor.parent().parent();
+          if (section.is('.amortization')) {
+           updateCalculations();
+         } else if (section.is('.rate-risk')) {
+           setTimeout(function() {
+            section.find('.rh-chart').each(function(i, element) {
+             var chart = rh.Chart.charts[element.id];
+             rh.Chart.renderDelayed(chart);
+           });
+          });
+         }
+         calculatorResized();
+       });
+       } else if ((op == null || op == 'collapse') && anchor.find('.collapse-section').length) {
+         var expando = anchor.find('.collapse-section');
+         expando.removeClass('collapse-section');
+         anchor.parent().next().slideUp('slow', function() {
+          expando.addClass('expand-section');
+          calculatorResized();
+        });
+       }
+     };
+
+     $('#calc_extension select.scenario').change(function(event) {
+      $('#calc_extension select.scenario').val($(this).val());
+
+		// trigger a *scoped* change event (updates the select2 without
+		// re-triggering the current change event).
+		$('#calc_extension select.scenario').trigger('change.select2');
+
+		updateCalculations();
+	});
+
+     $('#calc_extension .ledger-values input')
+     .not('input.select2-focusser')
+     .not('.select2-search input.select2-input')
+     .blur(function(event) {
+      var input = $(event.currentTarget);
+      if (input.val() != input.data("undoValue"))
+       input.data("setbyuser", true);
+     updateCalculations();
+   });
+
+     window.calcExtensionInit = false;
+     window.updateCalculatorExtension = function updateCalculatorExtension(scenario, home_price, downpayment, cmhc, principal, ltt_total, income, co_income, payment, property_tax, condo_fees, total_debt, mortgageRate, term, amortizationPeriod, freq, provinceCode, heating) {
+      if ($('#scenario').val() != scenario)
+       return;
+
+     if (!term) term = 5;
+
+     var ledger_dp = $('.ledger-dp .item-val');
+     var ledger_pst = $('.ledger-cmhc-pst .item-val');
+     var ledger_ltt = $('.ledger-ltt .item-val');
+     var ledger_lawyer = $('.ledger-lawyer .item-val');
+     var ledger_title = $('.ledger-title .item-val');
+     var ledger_cert = $('.ledger-cert');
+     var ledger_cash_req = $('.ledger-cash-req .item-val');
+
+		//var ledger_income = $('.ledger-income .item-val');
+		//var ledger_income_tax = $('.ledger-income-tax .item-val');
+		//var ledger_net_income = $('.ledger-net-income .item-val');
+		var ledger_payment = $('.ledger-mtg-payment .item-val');
+		var ledger_prop_tax = $('.ledger-prop-tax .item-val');
+		var ledger_condo = $('.ledger-condo');
+		var ledger_utils = $('.ledger-utils .item-val');
+		var ledger_debt = $('.ledger-debt .item-val');
+		var ledger_prop_ins = $('.ledger-prop-ins .item-val');
+		var ledger_phone = $('.ledger-phone .item-val');
+		var ledger_cable = $('.ledger-cable .item-val');
+		var ledger_internet = $('.ledger-internet .item-val');
+		var ledger_expenses = $('.ledger-expenses .item-val');
+
+		var ledger_today = $('.ledger-mtg-today .item-val');
+		var ledger_mtg_paid = $('.ledger-mtg-paid .item-val');
+		var ledger_mtg_eot = $('.ledger-mtg-eot .item-val');
+
+		//***************************************************
+		// Cash Needed
+		//***************************************************
+
+		// closing costs
+		setDollarValue(ledger_dp, downpayment);
+
+		var pst = cmhc_pst(cmhc, provinceCode);
+		setDollarValue(ledger_pst, pst);
+
+		setDollarValue(ledger_ltt, ltt_total);
+
+		var lawyer_fees = 1000;
+		setDollarValue(ledger_lawyer, lawyer_fees);
+
+		var title_insurance = home_price * 0.001;
+		setDollarValue(ledger_title, title_insurance);
+
+		var cert_fee = null;
+		if ($('#home_type').val() == "condo") {
+			cert_fee = 100;
+			setDollarValue(ledger_cert.find('.item-val'), cert_fee);
+			ledger_cert.show();
+		} else {
+			cert_fee = 0;
+			setDollarValue(ledger_cert.find('.item-val'), cert_fee);
+			ledger_cert.hide();
+		}
+
+		var totalCashNeeded = getDollarValue(ledger_dp) + getDollarValue(ledger_pst) + getDollarValue(ledger_ltt) + getDollarValue(ledger_lawyer) + getDollarValue(ledger_title) + getDollarValue(ledger_cert.find('.item-val'));
+
+		setDollarValue(ledger_cash_req, totalCashNeeded);
+
+		//***************************************************
+		// Monthly Expenses
+		//***************************************************
+
+		var total_income = null;
+		if (income != null && !isNaN(income)) {
+			total_income = co_income != null && !isNaN(co_income) ? income + co_income : income;
+			/*
+			var monthly_income = total_income / 12;
+			setDollarValue($(ledger_income[i]), monthly_income);
+
+			var monthly_income_tax = (income_tax(provinceCode, income) + income_tax(provinceCode, co_income)) / 12;
+			setDollarValue($(ledger_income_tax[i]), -monthly_income_tax);
+
+			var net_income = monthly_income - monthly_income_tax;
+			setDollarValue($(ledger_net_income[i]), net_income);
+			*/
+		}
+
+		// calculate monthly payment amount from bi-weekly payment
+		if (freq[0] != 12 || freq[1] != 1)
+			payment = payment / 2 * 4.348;
+		setDollarValue(ledger_payment, payment);
+
+		if (property_tax == null && ledger_prop_tax.data("setbyuser")) {
+			property_tax = getDollarValue(ledger_prop_tax);
+		} else {
+			property_tax = (prop_tax(provinceCode) * home_price / 12).round(4);
+		}
+		setDollarValue(ledger_prop_tax, property_tax);			
+
+		if ($('#home_type').val() == "condo") {
+			if (condo_fees == null)
+				condo_fees = getDollarValue(ledger_condo.find('.item-val'));
+
+			ledger_condo.show();
+			setDollarValue(ledger_condo.find('.item-val'), condo_fees);
+		} else {
+			condo_fees = 0;
+
+			setDollarValue(ledger_condo.find('.item-val'), condo_fees);
+			ledger_condo.hide();
+		}
+
+		if (total_debt == null)
+			total_debt = getDollarValue(ledger_debt);
+		setDollarValue(ledger_debt, total_debt);
+
+		// Re: heating/utilities. One might consider "utilities" to include more
+		// than just heating, but this control currently only takes heat into
+		// consideration.
+		var utils;
+
+		if(typeof heating !== "undefined") {
+			// Affordability calculator
+			utils = heating;
+			setDollarValue(ledger_utils, utils);
+		} else {
+			// Payment calculator
+			utils = getDollarValue(ledger_utils);
+
+			if (!utils && home_price) {
+				utils = heating_estimate(home_price);
+				setDollarValue(ledger_utils, utils);
+			}
+		}
+
+		var prop_ins = getDollarValue(ledger_prop_ins);
+		if (prop_ins != null)
+			setDollarValue(ledger_prop_ins, prop_ins);
+
+		var phone_est = getDollarValue(ledger_phone);
+		if (phone_est != null)
+			setDollarValue(ledger_phone, phone_est);
+
+		var cable_est = getDollarValue(ledger_cable);
+		if (cable_est != null)
+			setDollarValue(ledger_cable, cable_est);
+
+		var internet_est = getDollarValue(ledger_internet);
+		if (internet_est != null)
+			setDollarValue(ledger_internet, internet_est);
+
+		var totalMonthlyExpenses = getDollarValue(ledger_payment) + getDollarValue(ledger_prop_tax) + getDollarValue(ledger_debt) + getDollarValue(ledger_utils) + getDollarValue(ledger_prop_ins) + getDollarValue(ledger_condo.find('.item-val')) + getDollarValue(ledger_phone) + getDollarValue(ledger_cable) + getDollarValue(ledger_internet);
+
+		setDollarValue(ledger_expenses, totalMonthlyExpenses);
+
+		//***************************************************
+		// Interest Rate Risk
+		//***************************************************
+
+		// interest rate risk
+		setDollarValue(ledger_today, principal);
+
+		//***************************************************
+		// Amortization
+		//***************************************************
+
+		var amortization = can_amortization_table(principal, mortgageRate, amortizationPeriod, freq[0], freq[1]);
+
+		if (amortization) {
+			var termEndBalance = amortization[term - 1].balance;
+
+			setDollarValue(ledger_mtg_paid, -(principal - termEndBalance));
+			setDollarValue(ledger_mtg_eot, termEndBalance);
+
+			if(termEndBalance === 0) {
+				$('.rate-risk div.interest-rate-examples').hide();
+			} else {
+				$('.rate-risk div.interest-rate-examples').show();
+
+				// Update the table data.
+				$('.rate-risk tbody tr td.first').each(function(index, item) {
+					item = $(item);
+
+					if (index == 0)
+						item.prevAll('.rate-value').text(Globalize.format(mortgageRate, 'p'));
+
+					var riskRate = getPercentValue(item.prevAll('.rate-value'));
+					var riskPayment = can_mortgage_payment(termEndBalance, riskRate, amortizationPeriod - term, freq[0], freq[1]);
+					setDollarValue(item, riskPayment);
+				});
+			}
+		}
+
+		if ($('#calc_extension .amortization .collapse-section').length) {
+			drawAmortizationDisplay("extension-amort", amortization, term);
+			//var table = can_amortization_table(mortgageTotal, mortgageRate, amortizationPeriod, freq[0], freq[1]);
+			//$(schedules[i]).show().find("a").data("total", mortgageTotal).data("schedule", table);
+		}
+
+		window.calcExtensionInit = true;
+	};
+
+	window.clearCalculatorExtension = function clearCalculatorExtension(scenario, clearInit) {
+		if ($('#scenario').val() != scenario)
+			return;
+
+		var ledger_dp = $('.ledger-dp .item-val');
+		ledger_dp.text("$-");
+		var ledger_pst = $('.ledger-cmhc-pst .item-val');
+		ledger_pst.text("$-");
+		var ledger_ltt = $('.ledger-ltt .item-val');
+		ledger_ltt.text("$-");
+		var ledger_title = $('.ledger-title .item-val');
+		ledger_title.text("$-");
+		var ledger_cash_req = $('.ledger-cash-req .item-val');
+		ledger_cash_req.text("$-");
+
+		var ledger_payment = $('.ledger-mtg-payment .item-val');
+		ledger_payment.text("$-");
+		var ledger_prop_tax = $('.ledger-prop-tax .item-val');
+		ledger_prop_tax.text("$-");
+		var ledger_expenses = $('.ledger-expenses .item-val');
+		ledger_expenses.text("$-");
+
+		var ledger_today = $('.ledger-mtg-today .item-val');
+		ledger_today.text("$-");
+		var ledger_mtg_paid = $('.ledger-mtg-paid .item-val');
+		ledger_mtg_paid.text("$-");
+		var ledger_mtg_eot = $('.ledger-mtg-eot .item-val');
+		ledger_mtg_eot.text("$-");
+
+		$('.rate-risk tbody tr td.first').text("$-");
+
+		clearAmortizationDisplay("extension-amort");
+
+		if (clearInit) {
+			$('#calc_extension .section-header .collapse-section').each(function(index, item) {
+				toggleSectionVisibility($(item.parentNode), 'collapse');
+			});
+
+			window.calcExtensionInit = false;
+		}
+	};
+});
+
+
+window.drawAmortizationDisplay = function drawAmortizationDisplay(id, schedule, term, callback) {
+	var balance = [];
+	var interest = [];
+	var principal = [];
+
+	var table = $('#' + id + ' table.amort-sched tbody');
+	table.empty();
+	var paymentTotal = 0, interestTotal = 0, principalTotal = 0;
+
+	if (schedule != null) {
+		var now = new Date();
+		for (var year = 0; year < schedule.length; year++) {
+			// build chart data table
+			var time = now.getTime();
+			values = schedule[year];
+			balance[year] = [time, values.balance];
+			interest[year] = [time, values.interest];
+			principal[year] = [time, values.principal];
+			now.setFullYear(now.getFullYear() + 1);
+
+			// build DOM data table
+			paymentTotal += values.payment;
+			interestTotal += values.interest;
+			principalTotal += values.principal;
+
+			var html = [];
+			html.push('<tr class="'+(year % 2 == 0 ? ' alternate' : '')+'"><th class="year">'+now.getFullYear()+'</th><td>'+Globalize.format(values.payment, 'c0')+'</td><td>'+Globalize.format(values.principal, 'c0')+'</td><td>'+Globalize.format(values.interest, 'c0')+'</td><td>'+Globalize.format(values.balance, 'c0')+'</td></tr>');
+			if (term == (year + 1) || schedule.length == (year + 1)) {
+				html.push('<tr class="highlight"><th class="year">'+Globalize.localize('total-title')+(term == (year + 1) ? ' ('+Globalize.localize('term-title').toLowerCase()+')':'')+'</th><td>'+Globalize.format(paymentTotal, 'c0')+'</td><td>'+Globalize.format(principalTotal, 'c0')+'</td><td>'+Globalize.format(interestTotal, 'c0')+'</td><td>'+Globalize.format(values.balance, 'c0')+'</td></tr>');
+				if (schedule.length != (year + 1))
+					html.push('<tr class="end-of-term"><td colspan="5">'+Globalize.localize('amortization-content-1')+'</td></tr>');
+			}
+			table.append(html.join(''));
+		}
+	} else {
+		table.append('<tr class="end-of-term"><td colspan="5"> Globalize.localize("please-complete-the-input-for-the-selected-scenario-in-order-to-continue") </td></tr>');
+	}
+
+	// *********************************************** [ DEFAULT CHART OPTIONS ]
+
+	var chartOptions = {
+		chart: {
+			renderTo: id + "_chart",
+			margin: [35, 60, 70, 65]
+		},
+		plotOptions: {
+			column: {
+				stacking: "normal"
+			}
+		},
+		title: {
+			text: Globalize.localize('amort-schedule-title')
+		},
+		xAxis: {
+			type: "datetime",
+			title: {
+				text: null
+			}
+		},
+		yAxis: [
+   {
+    title: {
+     text: "Balance",
+     x: -30
+   },
+   min: 0,
+   labels: {
+     formatter: function() {
+      return Globalize.format(this.value, "c0");
+    }
+  }
+},
+{
+  title: {
+   text: "Payment",
+   x: 25
+ },
+ opposite: true,
+ labels: {
+   formatter: function() {
+    return this.value.numberFormat("$#,#");
+  }
+}
+}
+],
+series: [
+{
+  type: 'column',
+  name: 'Interest',
+  data: interest,
+  yAxis: 1,
+  color: 'rgba(192, 192, 192, 0.33)'
+},
+{
+  type: 'column',
+  name: 'Principal',
+  data: principal,
+  yAxis: 1,
+  color: 'rgba(161, 196, 65, 0.33)'
+},
+{
+  type: 'line',
+  name: 'Balance',
+  data: balance,
+  yAxis: 0,
+  color: 'rgba(36, 93, 128, 1)'
+}
+],
+legend: {
+ layout: 'horizontal',
+ align: 'center',
+ borderWidth: 1
+},
+tooltip: {
+ formatter: function() {
+  var date = new Date(this.x);
+  return '<b>'+ this.series.name +'</b><br/>'+
+  date.getFullYear() + ': ' + this.y.numberFormat("$#,#");
+}
+},
+credits: {
+ enabled: false
+}
+};
+
+	// ************************************************** [ LOAP CHART OPTIONS ]
+
+	var chartOptionsLoap = {
+		chart: {
+			renderTo: id + "_chart",
+			margin: [35, 80, 70, 90],
+			style: {
+				fontFamily: 'inherit',
+			},
+		},
+		plotOptions: {
+			column: {
+				stacking: "normal",
+			},
+		},
+		title: {
+			text: null,
+		},
+		xAxis: {
+			type: "datetime",
+			title: {
+				text: null,
+			},
+			labels: {
+				style: {
+					color: ratehub.colors.blackberry,
+					fontFamily: 'inherit',
+					fontSize: '1em',
+					fontWeight: '500',
+				},
+				y: 26
+			},
+		},
+		yAxis: [
+   {
+    title: {
+     text: "Balance",
+     x: -30,
+   },
+   min: 0,
+   labels: {
+     style: {
+      color: ratehub.colors.blackberry,
+      fontFamily: 'inherit',
+      fontSize: '1em',
+      fontWeight: '500',
+    },
+    formatter: function() {
+      return Globalize.format(this.value, "c0");
+    },
+    x: -16,
+  },
+},
+{
+  title: {
+   text: "Payment",
+   x: 25,
+ },
+ opposite: true,
+ labels: {
+   style: {
+    color: ratehub.colors.blackberry,
+    fontFamily: 'inherit',
+    fontSize: '1em',
+    fontWeight: '500',
+  },
+  formatter: function() {
+    return this.value.numberFormat("$#,#");
+  },
+  x: 16,
+},
+},
+],
+series: [
+{
+  type: 'column',
+  name: 'Interest',
+  data: interest,
+  yAxis: 1,
+  color: ratehub.colors.mistDark,
+  borderWidth: 0,
+  depth: 0,
+  shadow: 0,
+  states: {
+   hover: {
+    color: ratehub.colors.mist,
+  },
+},
+},
+{
+  type: 'column',
+  name: 'Principal',
+  data: principal,
+  yAxis: 1,
+  color: ratehub.colors.berryLight,
+  borderWidth: 0,
+  depth: 0,
+  shadow: 0,
+  states: {
+   hover: {
+    color: ratehub.colors.blueberryLight,
+  },
+},
+},
+{
+  type: 'line',
+  name: 'Balance',
+  data: balance,
+  yAxis: 0,
+  color: 'rgba(36, 93, 128, 1)',
+  color: ratehub.colors.berry,
+},
+],
+legend: {
+ layout: 'horizontal',
+ align: 'center',
+ borderWidth: 0,
+ y: 0,
+ margin: 20,
+ itemStyle: {
+  fontFamily: 'inherit',
+  fontWeight: 400,
+},
+},
+tooltip: {
+ formatter: function() {
+  var date = new Date(this.x);
+  return '<b>'+ this.series.name +'</b><br/>'+
+  date.getFullYear() + ': ' + this.y.numberFormat("$#,#");
+},
+style: {
+  fontFamily: 'inherit',
+},
+},
+credits: {
+ enabled: false,
+},
+};
+
+addScriptRef("vendor/highcharts/highcharts.js", function() {
+		var options = chartOptions; // default (control)
+
+		if (isRatehubLoap()) {
+				var options = chartOptionsLoap; // LOAP experiment
+      }
+
+      new Highcharts.Chart(options);
+
+      if (typeof(callback) == 'function')
+       callback("extension-amort");
+   });
+}
+
+window.clearAmortizationDisplay = function clearAmortizationDisplay(id) {
+	$('#' + id + '_chart').empty();
+	$('#' + id + ' table.amort-sched tbody').empty().append('<tr class="end-of-term"><td colspan="5">Globalize.localize("please-complete-the-input-for-the-selected-scenario-in-order-to-continue")</td></tr>');
+}
+
+rh.Control.init();
+</script>
+<div id="hidden" style="display:none;">
+  <div id="skin"></div>
+</div>
+</body>
+
+<!-- Mirrored from www.ratehub.ca/mortgage-payment-calculator by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Feb 2021 07:25:27 GMT -->
+</html>

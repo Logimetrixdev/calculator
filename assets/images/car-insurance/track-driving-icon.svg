@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>track-driving-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="track-driving-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M33.7272727,8 L41.4545455,8 C42.3080764,8 43,8.70601251 43,9.57692308 L43,47.4230769 C43,48.2939875 42.3080764,49 41.4545455,49 L10.5454545,49 C9.69192357,49 9,48.2939875 9,47.4230769 L9,9.57692308 C9,8.70601251 9.69192357,8 10.5454545,8 L18.2727273,8 M28.5,5 C28.5,3.34314575 27.1568542,2 25.5,2 C23.8431458,2 22.5,3.34314575 22.5,5 L18,5 L18,11 L33,11 L33,5 L28.5,5 Z M9,27.4285714 L15.1818182,27.4285714 L19.8181818,33.7142857 L26,18 L32.1818182,40 L36.8181818,27.4285714 L43,27.4285714" id="health-report" stroke="#FFFFFF" stroke-width="2"></path>
+    </g>
+</svg>

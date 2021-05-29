@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>winter-tires-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="winter-tires-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(4.000000, 2.000000)">
+            <rect id="Rectangle" fill="#56ADC2" x="21" y="2" width="2" height="44" rx="1"></rect>
+            <rect id="Rectangle-Copy-2" fill="#56ADC2" transform="translate(21.853553, 23.853553) rotate(-45.000000) translate(-21.853553, -23.853553) " x="20.8535534" y="6.67588386" width="2" height="34.3553391" rx="1"></rect>
+            <rect id="Rectangle-Copy" fill="#56ADC2" transform="translate(22.000000, 24.000000) rotate(-270.000000) translate(-22.000000, -24.000000) " x="21" y="2" width="2" height="44" rx="1"></rect>
+            <rect id="Rectangle-Copy-3" fill="#56ADC2" transform="translate(21.735281, 24.735281) rotate(-315.000000) translate(-21.735281, -24.735281) " x="20.7352814" y="7.72487373" width="2" height="34.0208153" rx="1"></rect>
+            <circle id="Oval" stroke="#56ADC2" stroke-width="2" fill="#FFFFFF" cx="9.5" cy="11.5" r="2.5"></circle>
+            <circle id="Oval-Copy-7" stroke="#56ADC2" stroke-width="2" fill="#FFFFFF" cx="34.5" cy="11.5" r="2.5"></circle>
+            <circle id="Oval-Copy-2" stroke="#56ADC2" stroke-width="2" fill="#FFFFFF" cx="9.5" cy="36.5" r="2.5"></circle>
+            <circle id="Oval-Copy" fill="#56ADC2" cx="22" cy="2" r="2"></circle>
+            <circle id="Oval-Copy-6" fill="#56ADC2" cx="22" cy="46" r="2"></circle>
+            <circle id="Oval-Copy-4" fill="#56ADC2" cx="42" cy="24" r="2"></circle>
+            <circle id="Oval-Copy-5" fill="#56ADC2" cx="2" cy="24" r="2"></circle>
+            <circle id="Oval-Copy-3" stroke="#56ADC2" stroke-width="2" fill="#FFFFFF" cx="34.5" cy="36.5" r="2.5"></circle>
+        </g>
+    </g>
+</svg>

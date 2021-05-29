@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en" class="loap">
+
+<!-- Mirrored from www.ratehub.ca/penalty-calculator by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Feb 2021 07:26:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Penalty Calculator Prepayment Penalty</title>
+  <meta name="description" content="Whether you want to refinance or move houses, use our mortgage penalty calculator to determine what it will cost you to break your mortgage early.">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon2a43.png?v=A079kwKzvM">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x322a43.png?v=A079kwKzvM">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x162a43.png?v=A079kwKzvM">
+  <link rel="manifest" href="site2a43.html?v=A079kwKzvM">
+  <link rel="mask-icon" href="safari-pinned-tab2a43.svg?v=A079kwKzvM" color="#000000">
+  <link rel="shortcut icon" href="favicon2a43.ico?v=A079kwKzvM">
+  
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="penalty-calculator.html">
+  <meta property="og:url" content="penalty-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ratehub.ca">
+  <meta property="og:image" content="assets/images/FB-opengraph-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:title" content="Mortgage Penalty Calculator Canada | Prepayment Penalty">
+  <meta property="og:description" content="Whether you want to refinance or move houses, use our mortgage penalty calculator to determine what it will cost you to break your mortgage early.">
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="assets/css/app67a7.css?v=77e67283">
+  <link rel="stylesheet" type="text/css" href="assets/css/refinance-calculatorsf95c.css?v=1c8db794">
+  <!--[if IE 8]>
+    <script src="/assets/js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/fallbacks-ie8.css">
+    <script src="/assets/js/respond.js"></script>
+  <![endif]-->
+</head>
+<body ng-app="ratehub" class="rh normal disable-mobile">
+  <script>
+    var _vwo_code=(function(){ var account_id=313142, settings_tolerance=3000, library_tolerance=3500, use_existing_jquery=true, f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b='body{}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('http://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();var _vis_opt_queue=window._vis_opt_queue||[],_vis_counter=0;_vis_opt_queue.push(function(){try{if(!_vis_counter){for(var _,o,e={},i=0;i<_vwo_exp_ids.length;i++)o=_vwo_exp_ids[i],_vwo_exp[o].ready&&(_=_vis_opt_readCookie("_vis_opt_exp_"+o+"_combi"),void 0!==_vwo_exp[o].combination_chosen&&(_=_vwo_exp[o].combination_chosen),void 0!==_vwo_exp[o].comb_n[_]&&(e["VWO-Test-ID-"+o]=_vwo_exp[o].comb_n[_],_vis_counter++));_vis_counter&&heap.addUserProperties(e)}}catch(_){}});      </script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN8QRHD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <svg class="sprite-sheet" style="position: absolute; width: 0; height: 0;">
+    </svg>
+
+    <div class="content-area">
+      <div class="l-container">
+        <main class="has-above">
+          <div class="l-split-left above">
+            <div class="l-content">
+
+              <div id="" class="ratehub-calc-breakage-penalty refi-calc container_form calc-standalone">
+               <div class="header">
+                <h1>Mortgage penalty calculator</h1>
+              </div>
+
+              <h3 class="banner">Estimate your mortgage break penalty</h3>
+              <form action="javascript:void(0);" method="post">
+                <table class="form regular help">
+                 <tr>
+                  <td data-bind="css: {error: termCompleted()}">
+                   <label>When did your current mortgage start?</label>
+                   <div class="day-select">
+                    <select data-bind="value: startDay.int(), options: dayList, uniqueName: true"
+                    class="chosen" tabindex="1"></select>
+                  </div>
+                  <div class="month-select">
+                    <select data-bind="value: startMonth.int(), uniqueName: true"
+                    class="chosen month" tabindex="2">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+                <div class="year-select">
+                  <select data-bind="value: startYear.int(), options: yearList, uniqueName: true"
+                  class="chosen year" tabindex="3"></select>
+                </div>
+                <span class="rh-tooltip-container top-right">
+                  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-question fa-stack-1x"></i>
+                  </span><span class="fa-stack is-hover">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+                  </span></a>
+                  <span class="rh-content">
+                  Enter the date you entered into your original (existing) mortgage contract.      </span>
+                </span>
+
+
+              </td>
+
+              <td class="optional">
+                <label>What is your remaining mortgage balance?</label>
+                <input type="text" id="current_principal" placeholder="0.00" tabindex="4" class="dtype_currency"
+                data-bind="value: principal.currency(), disable: isPrincipalEstimated" />
+                <span class="rh-tooltip-container top-right">
+                  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-question fa-stack-1x"></i>
+                  </span><span class="fa-stack is-hover">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+                  </span></a>
+                  <span class="rh-content">
+                  The balance of your original (existing) mortgage the day you are planning to refinance.      </span>
+                </span>
+
+
+                <input type="checkbox" id="estimate_current_principal" class="checkbox"
+                data-bind="checked: isPrincipalEstimated"/>
+              I don&#039;t know this, help me estimate.								</td>
+
+            </tr>
+            <tr data-bind="fadeVisible: isPrincipalEstimated">
+              <td>
+               <label>What is your current mortgage payment?</label>
+               <input type="text" id="current_payment" placeholder="0.00" tabindex="5" class="dtype_currency"
+               data-bind="value: payment.currency(), disable: isPaymentEstimated"/>
+               <span class="rh-tooltip-container top-right">
+                <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+                  <i class="fa fa-circle-thin fa-stack-2x"></i>
+                  <i class="fa fa-question fa-stack-1x"></i>
+                </span><span class="fa-stack is-hover">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+                </span></a>
+                <span class="rh-content">
+                Enter the current mortgage payment you make whether semi-monthly, monthly or semi-monthly.      </span>
+              </span>
+
+
+              <input type="checkbox" class="checkbox" data-bind="checked: isPaymentEstimated" />
+            I don&#039;t know this, help me estimate.				</td>
+            <td>
+             <label>How often do you make mortgage payments?</label>
+             <select name="payFrequency" id="current_freq" class="chosen" tabindex="6"
+             data-bind="value: payFrequency.val">
+             <option value="weekly">weekly</option>
+             <option value="semi_monthly">semi-monthly</option>
+             <option value="monthly">monthly</option>
+             <option value="yearly">yearly</option>
+           </select>
+           <span class="rh-tooltip-container top-right">
+            <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+              <i class="fa fa-circle-thin fa-stack-2x"></i>
+              <i class="fa fa-question fa-stack-1x"></i>
+            </span><span class="fa-stack is-hover">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+            </span></a>
+            <span class="rh-content">
+            Enter the frequency with which you currently make mortgage payments: monthly, semi-monthly or yearly.      </span>
+          </span>
+
+
+        </td>
+      </tr>
+
+      <tr data-bind="fadeVisible: isPrincipalEstimated() || isPaymentEstimated()">
+        <td>
+         <label>What was your original mortgage balance?</label>
+         <input type="text" id="original_principal" placeholder="0.00" tabindex="7" class="dtype_currency"
+         data-bind="value: originalPrincipal.currency()" />
+         <span class="rh-tooltip-container top-right">
+          <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+            <i class="fa fa-circle-thin fa-stack-2x"></i>
+            <i class="fa fa-question fa-stack-1x"></i>
+          </span><span class="fa-stack is-hover">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+          </span></a>
+          <span class="rh-content">
+          Enter the balance of your mortgage on the initial signing date of your contract.      </span>
+        </span>
+
+
+      </td>
+      <td data-bind="fadeVisible: showAmortization">
+       <label for="current_amortization">Amortization period of your current mortgage?</label>
+       <span class="rh-tooltip-container top-right">
+        <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+          <i class="fa fa-circle-thin fa-stack-2x"></i>
+          <i class="fa fa-question fa-stack-1x"></i>
+        </span><span class="fa-stack is-hover">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+        </span></a>
+        <span class="rh-content">
+        Enter the amortization of your mortgage on the initial signing date of your contract.      </span>
+      </span>
+
+
+      <div class="sliderContainer sliderSelect fiveToThirtyFive">
+
+        <div class="sliderNumbers"></div>
+
+        <select name="current_amortization" id="current_amortization" class="hide"
+        tabindex="8">
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+        <option>35</option>
+      </select>
+    </div>
+  </td>
+</tr>
+<!-- End of Additional Fields -->
+<tr>
+  <td>
+   <label>Who is your current mortgage provider?</label>
+   <div>
+    <select id="provider" name="provider" class="chosen" tabindex="9" data-bind="value: rate.provider.int()" >
+     <option value="" selected="selected">
+     Please select			</option>
+     <option value="23">Bank of Montreal</option>
+     <option value="24">CIBC</option>
+     <option value="28">Coast Capital</option>
+     <option value="37">Desjardins</option>
+     <option value="15">First National</option>
+     <option value="16">FirstLine Mortgages</option>
+     <option value="18">HSBC</option>
+     <option value="17">HomeTrust</option>
+     <option value="19">Laurentian Bank</option>
+     <option value="13">MCAP</option>
+     <option value="20">MacQuarie</option>
+     <option value="27">Manulife Bank</option>
+     <option value="22">National Bank</option>
+     <option value="25">RBC Royal Bank</option>
+     <option value="14">Scotiabank</option>
+     <option value="26">Simplii Financial ™</option>
+     <option value="12">TD Bank</option>
+     <option value="11">Tangerine</option>
+   </select>
+
+   <span class="rh-tooltip-container top-right">
+    <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+      <i class="fa fa-circle-thin fa-stack-2x"></i>
+      <i class="fa fa-question fa-stack-1x"></i>
+    </span><span class="fa-stack is-hover">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+    </span></a>
+    <span class="rh-content">
+    Which mortgage lender is providing your current (existing) mortgage contract?      </span>
+  </span>
+
+
+</div>
+</td>
+<td data-bind="css: {error: termCompleted()}">
+ <label for="current_term">What was the original term of your mortgage?</label>
+ <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-content">
+  The mortgage term is the amount of time a homebuyer commits to the rules, conditions and interest rate agreed upon with the lender. The term can be anywhere from six months to 10 years, with a 5-year mortgage term being the most common duration.      </span>
+</span>
+
+
+<div class="sliderContainer sliderSelect oneToTen">
+  <div class="sliderNumbers"></div>
+  <select name="term" id="current_term" class="hide" tabindex="10">
+   <option>1</option>
+   <option>2</option>
+   <option>3</option>
+   <option>4</option>
+   <option selected>5</option>
+   <option>10</option>
+ </select>
+</div>
+</td>
+</tr>
+<tr>
+  <td>
+   <label>What type of rate is it?</label>
+   <span class="rh-tooltip-container top-right">
+    <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+      <i class="fa fa-circle-thin fa-stack-2x"></i>
+      <i class="fa fa-question fa-stack-1x"></i>
+    </span><span class="fa-stack is-hover">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+    </span></a>
+    <span class="rh-content">
+    Is your current mortgage rate variable or fixed?      </span>
+  </span>
+
+
+  <div class="binaryContainer clearfix">
+    <div class="radioFirst">
+     <label>
+      <input type="radio" name="rate_type" value="variable" tabindex="11"
+      data-bind="checked: rate.type">
+    Variable rate							</label>
+  </div>
+  <div class="radioSecond">
+   <label>
+    <input type="radio" name="rate_type" value="fixed" tabindex="12"
+    data-bind="checked: rate.type">
+  Fixed rate							</label>
+</div>
+</div>
+</td>
+<td>
+ <label>What is your existing mortgage rate?</label>
+ <input type="text" id="existing_rate" placeholder="Ex: 3.79%" tabindex="13" class="dtype_percent"
+ data-bind="value: rate.value.percent()" />
+ <span class="rh-tooltip-container top-right">
+  <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-question fa-stack-1x"></i>
+  </span><span class="fa-stack is-hover">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+  </span></a>
+  <span class="rh-content">
+  Enter the mortgage rate you are currently paying on your existing mortgage rate.      </span>
+</span>
+
+
+</td>
+</tr>
+<tr>
+  <td data-bind="visible: penaltyObject.postedRequired() && !isPostedKnown()">
+   <label for="posted_discount">What rate discount did you receive on your existing mortgage? </label>
+   <span class="rh-tooltip-container top-right">
+    <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+      <i class="fa fa-circle-thin fa-stack-2x"></i>
+      <i class="fa fa-question fa-stack-1x"></i>
+    </span><span class="fa-stack is-hover">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+    </span></a>
+    <span class="rh-content">
+    The discount you received when signing your contract. For example if the posted rate at the time was 5.0% and you ended up paying 3.0%, your discount would have been 2%.      </span>
+  </span>
+
+
+  <input type="text" id="posted_discount" placeholder="eg. 1.20%" tabindex="14" class="dtype_percent"
+  data-bind="value: discount.percent(), disable: isDiscountEstimated() && estimatedDiscount()" />
+  <span data-bind="visible: estimatedDiscount">
+    <input type="checkbox" id="estimate_discount" class="checkbox"
+    data-bind="checked: isDiscountEstimated" />I don&#039;t know this, help me estimate.				</td></span>
+    <td>
+     <label for="province">Which province are you located in?</label>
+     <select id="province" name="province" class="chosen" tabindex="15" data-bind="value: rate.province" >
+       <option value="" >
+       Please select			</option>
+       <option value="BC">British Columbia</option>
+       <option value="AB">Alberta</option>
+       <option value="SK">Saskatchewan</option>
+       <option value="MB">Manitoba</option>
+       <option value="ON" selected="selected">Ontario</option>
+       <option value="QC">Quebec</option>
+       <option value="NB">New Brunswick</option>
+       <option value="NS">Nova Scotia</option>
+       <option value="PE">Prince Edward Island</option>
+       <option value="NL">Newfoundland</option>
+       <option value="YK">Yukon</option>
+       <option value="NT">Northwest Territories</option>
+       <option value="NU">Nunavut</option>
+     </select>
+
+
+   </td>
+ </tr>
+</table>
+</form>
+
+<div>
+  <div class="grayContainer" data-bind="fadeVisible: isPaymentEstimated() || isPrincipalEstimated()">
+   <p class="center">
+    <strong>
+     <p>Based on your inputs we've estimated your <span data-bind="visible: isPaymentEstimated()">mortgage payment</span> <span data-bind="visible: isPaymentEstimated() && isPrincipalEstimated()">and</span> <span data-bind="visible: isPrincipalEstimated">remaining mortgage</span>. Adjust these amounts if you've taken advantage of your prepayment options.</p>
+   </strong>
+ </p>
+ <hr/>
+ <table class="form regular">
+  <tr>
+   <td class="help long" data-bind="fadeVisible: isPaymentEstimated()">
+    <label>Your current mortgage payment:</label>
+    <input type="text" id="computed_current_payment" placeholder="0.00" class="dtype_currency" data-bind="value: payment.currency()" />
+    <span class="rh-tooltip-container top-right">
+      <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-question fa-stack-1x"></i>
+      </span><span class="fa-stack is-hover">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+      </span></a>
+      <span class="rh-content">
+      We’ve estimated your current mortgage payment based on your inputs above. Please adjust if you’ve taken advantage of your prepayment options.      </span>
+    </span>
+
+
+  </td>
+  <td class="help long" data-bind="fadeVisible: isPrincipalEstimated">
+    <label>Your remaining mortgage balance:</label>
+    <input type="text" placeholder="0.00" class="dtype_currency" data-bind="value: principal.currency()"/>
+    <span class="rh-tooltip-container top-right">
+      <a class="rh-tooltip" data-trigger="hover" data-placement="top" show-by-default="false"><span class="fa-stack no-hover">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-question fa-stack-1x"></i>
+      </span><span class="fa-stack is-hover">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-question fa-inverse fa-stack-1x"></i>
+      </span></a>
+      <span class="rh-content">
+      The balance of your original (existing) mortgage the day you are planning to refinance.      </span>
+    </span>
+
+
+  </td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class="resultsContainer">
+  <div class="paper" data-bind="css: {papertop: (penaltyObject.type() !== null)}">
+   <h2>
+    Your estimated mortgage penalty is				<strong data-bind="text: penaltyObject.total.currency(0, '$-'), fadeChange: 'slow'">$-</strong>.
+  </h2>
+</div>
+<div data-bind="visible: penaltyObject.notes() && penaltyObject.type() !== null" class="notes paper papertop paperbottom ">
+ <ol data-bind="template: {foreach: penaltyObject.notes}">
+  <li data-bind="text: $data"></li>
+</ol>
+</div>
+<div data-bind="slideVisible: (penaltyObject.type() !== null)" class="paper paperbottom ">
+ <div class="hiddenCalc">
+  <!-- Calculation container for 3 months' -->
+  <div class="hiddenCalcContainer calcWork" id="breakageThreeMonths"
+  data-bind="css: {expanded: showPenaltyCalculations() && penaltyObject.type() == '3month', discharge: penaltyObject.discharge()}">
+  <div class="calcSet ird-3-months">
+    <h2 class="short">3 months&#039; interest penalty</h2>
+    <div class="valuePair">
+     <span class="value" data-bind="text: penaltyObject.threeMonth.rate.percent()">0%</span>
+     <span class="valueLabel"
+     data-bind="text: penaltyObject.threeMonth.rateInfo()?
+     penaltyObject.threeMonth.rateInfo().description || Globalize.localize(penaltyObject.threeMonth.rateInfo().descriptionKey) : null">
+   </span>
+ </div>
+
+ <span class="operator">x</span>
+ <div class="valuePair">
+   <span class="value" data-bind="text: principal.currency()">$-</span>
+   <span class="valueLabel">outstanding mortgage balance</span>
+ </div>
+
+ <span class="operator">x</span>
+ <div class="valuePair">
+   <span class="value">3/12</span>
+   <span class="valueLabel"></span>
+ </div>
+
+ <span class="operator">=</span>
+ <div class="valuePair highlight">
+   <span class="value" data-bind="text: penaltyObject.threeMonth.penalty.currency()">0.08</span>
+   <span class="valueLabel">three month&#039;s interest penalty</span>
+ </div>
+
+ <div data-bind="visible: penaltyObject.discharge() > 0">
+   <hr/>
+   <div class="valuePair">
+    <span class="value" data-bind="text: penaltyObject.breakage.currency()">0.00</span>
+    <span class="valueLabel">mortgage break penalty</span>
+  </div>
+  <span class="operator">+</span>
+  <div class="valuePair">
+    <span class="value" data-bind="text: penaltyObject.discharge.currency()">0.00</span>
+    <span class="valueLabel">lender discharge fees</span>
+  </div>
+
+  <span class="operator">=</span>
+  <div class="valuePair highlight">
+    <span class="value" data-bind="text: penaltyObject.total.currency()">0.00</span>
+    <span class="valueLabel">total fee to break mortgage</span>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Calculation container for IRD -->
+<div class="hiddenCalcContainer calcWork" id="breakageIRDPosted"
+data-bind="css: {expanded: showPenaltyCalculations() && penaltyObject.type() == 'ird', discharge: penaltyObject.discharge()}">
+<div class="calcSet">
+  <h2 class="short">Interest rate differential (IRD) penalty</h2>
+  <span class="bracketOpen">(</span>
+  <div class="valuePair">
+   <span class="value" data-bind="text: penaltyObject.ird.original.percent()">0%</span>
+   <span class="valueLabel"
+   data-bind="text: penaltyObject.ird.originalRateInfo()? Globalize.localize(penaltyObject.ird.originalRateInfo().descriptionKey) : null">
+ </span>
+</div>
+
+<span class="operator">-</span>
+<div class="valuePair">
+ <span class="value" data-bind="text: penaltyObject.ird.comparison.percent()">0%</span>
+ <span class="valueLabel" 
+ data-bind="text: penaltyObject.ird.comparisonRateInfo()? Globalize.localize(penaltyObject.ird.comparisonRateInfo().descriptionKey) : null">
+</span>
+</div>
+<span class="bracketClose">)</span>
+<span class="operator">/</span>
+<div class="valuePair">
+ <span class="value">12</span>
+ <span class="valueLabel">convert to monthly interest rate</span>
+</div>
+<span class="operator">=</span>
+<div class="valuePair highlight">
+ <span class="value" data-bind="text: penaltyObject.ird.differential.precision(2)">0.00</span>
+ <span class="valueLabel">ird factor</span>
+</div>
+<hr/>
+
+<div class="valuePair">
+ <span class="value" data-bind="text: penaltyObject.ird.differential.precision(2)">0.00</span>
+ <span class="valueLabel">ird factor</span>
+</div>
+<span class="operator">x</span>
+<div class="valuePair">
+ <span class="value" data-bind="text: principal.currency()">$-</span>
+ <span class="valueLabel">outstanding mortgage balance</span>
+</div>
+
+<span class="operator">x</span>
+<div class="valuePair">
+ <span class="value" data-bind="text: penaltyObject.ird.remainingMonths">12</span>
+ <span class="valueLabel">months remaining in term</span>
+</div>
+<span class="operator">=</span>
+<div class="valuePair highlight">
+ <span class="value" data-bind="text: penaltyObject.ird.penalty.currency()">0.08</span>
+ <span class="valueLabel">interest rate differential</span>
+</div>
+
+<div data-bind="visible: penaltyObject.discharge() > 0">
+ <hr/>
+ <div class="valuePair">
+  <span class="value" data-bind="text: penaltyObject.breakage.currency()">0.00</span>
+  <span class="valueLabel">mortgage break penalty</span>
+</div>
+<span class="operator">+</span>
+<div class="valuePair">
+  <span class="value" data-bind="text: penaltyObject.discharge.currency()">0.00</span>
+  <span class="valueLabel">lender discharge fees</span>
+</div>
+
+<span class="operator">=</span>
+<div class="valuePair highlight">
+  <span class="value" data-bind="text: penaltyObject.total.currency()">0.00</span>
+  <span class="valueLabel">total fee to break mortgage</span>
+</div>
+</div>
+</div><!-- /.calcSet -->
+</div><!-- /.hiddenCalcContainer -->
+
+<!-- Calculation container for open -->
+<div class="hiddenCalcContainer calcWork" id="breakageOpen"
+data-bind="css: {expanded: (showPenaltyCalculations() && penaltyObject.type() == 'open')}">
+<div class="calcSet">
+  <h2 class="short">The mortgage is open and you will not incur a penalty to break it.</h2>
+</div><!-- /.calcSet -->
+</div><!-- /.hiddenCalcContainer -->
+
+<a href="javascript:void(0)" class="showHide" data-bind="text: showCalculationsText">
+</a>
+</div>
+</div>
+<div class="papershadow med"></div>
+
+<div class="buttonFooter">
+ <a href="mortgage-refinance-calculator.html" class="greenButton icon first">
+   <img src="images/buttonIcon_calculator.png"/>Calculate your new mortgage payment			</a>
+
+ </div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="l-split-left">
+  <div class="l-content">
+    <p style="margin-bottom:0;">
+      <em>*Disclaimer: Please note that the calculation results are estimates based on our most up-to-date information sourced from lenders’ publicly stated methodology and first-hand accounts. This information is subject to change. The results do not include special offers, such as cash back incentives, or any discharge, registration, reinvestment or transfer fees you may also incur. For an exact penalty calculation, contact your lender directly.</em></p>
+      <div class="l-container"><div class="l-half" style="vertical-align:top;">
+        <p>
+          ATB Financial: 1-800-332-8383<br>BMO: 1-877-225-5266<br>CIBC: 1-888-264-6843<br>First National: 1-888-488-0794<br>FirstLine: 1-800-970-0700<br>Home Trust: 1-877-903-2133<br>HSBC: 1-888-310-4722<br>ING DIRECT Canada: 1-866-700-9836 <br>Laurentian: 1-800-252-1846  </p>
+        </div><div class="l-half" style="vertical-align:top;">
+          <p>
+            MacQuarie: 1-877-462-3788<br>MCAP: 1-800-265-2624<br>National Bank: 1-888-483-5628<br>PC Financial: 1-888-236-6362<br>RBC: 1-800-769-2511<br>Resmor/RMG: 1-866-809-5800<br>Scotiabank: 1-888-990-9923<br>TD: 1-800-722-3098  </p>
+          </div></div>
+          <hr>
+          <div class="rh-call-to-action"><div class="text">
+            <h3 class="title">
+            A lower mortgage rate is a click away      </h3>
+            <p class="description">
+            Don’t miss out on all-time low mortgage rates. Refinance into a new, lower mortgage rate today and save.      </p>
+          </div><div class="call-to-action action">
+            
+          </div>  </div>
+        </hr>
+        <hr>
+        <h2>
+        Mortgage Penalty Calculator</h2>
+        <p>
+        When breaking your mortgage contract early, usually because of a refinance or the sale of your home, you will unfortunately have to pay your lender a penalty called a prepayment penalty. The amount you pay will depend on a variety of factors including the day you signed your original mortgage contract, the term of that contract and your existing mortgage balance, rate type and mortgage rate.</p>
+        <p>
+        One of the biggest drivers of your mortgage penalty is whether you have a variable or fixed mortgage rate. Fixed rate holders pay the greater of interest rate differential or three months interest, while variable rate holders pay just three months interest.</p>
+        <p>
+          Ratehub.ca’s mortgage penalty calculator captures your required inputs, determines your prepayment penalty and shows you the corresponding calculations for the curious mathematicians out there. For a more detailed article on determining your penalty, please visit our <a href="cost-of-refinancing.html">costs of refinance</a> page.</p>
+          <hr>
+
+        </div>
+      </div>
+    </main>
+    <div class="l-split-right">
+     <aside>
+      <div class="big-box">
+        <div id="big-box-1"></div>
+      </div>
+
+      <ul class="rh-panels rh-panels-large">
+
+
+        <li class="rh-panel collapsed">
+          <a class="title" href="mortgage-calculators.html" data-panel="collapse-next">
+            <i class="fa fa-fw rh-calculator"></i><span>Calculators</span><i class="fa fa-fw fa-chevron-up"></i><i class="fa fa-fw fa-chevron-down"></i>      </a>
+            <ul class="rh-panels contents rh-panels-small">
+              <li class="rh-panel collapsed">
+                <a class="title" href="mortgage-calculators.html" data-panel="collapse-next">
+                  <span>Home Buying Calculators</span><i class="fa fa-fw fa-chevron-up"></i><i class="fa fa-fw fa-chevron-down"></i>      </a>
+                  <ul class="contents rh-check-list">
+                    <li class="checked">
+                      <a href="mortgage-payment-calculator.html"><i class="fa fa-fw fa-check"></i><span>Payment Calculator</span>
+                      </a>
+                    </li>
+                    <li >
+                      <a href="mortgage-affordability-calculator.html"><i class="fa fa-fw fa-check"></i><span>Affordability Calculator</span>
+                      </a>
+                    </li>
+                    <li >
+                      <a href="land-transfer-tax.html"><i class="fa fa-fw fa-check"></i><span>Land Transfer Tax Calculator</span>
+                      </a>
+                    </li>
+                    <li >
+                      <a href="cmhc-mortgage-insurance.html"><i class="fa fa-fw fa-check"></i><span>Mortgage Insurance Calculator</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="rh-panel collapsed">
+                  <a class="title" href="mortgage-calculators.html" data-panel="collapse-next">
+                    <span>Refinancing Calculators</span><i class="fa fa-fw fa-chevron-up"></i><i class="fa fa-fw fa-chevron-down"></i>      </a>
+                    <ul class="contents rh-check-list">
+                      <li >
+                        <a href="mortgage-refinance-calculator.html"><i class="fa fa-fw fa-check"></i><span>Refinance Calculator</span>
+                        </a>
+                      </li>
+                      <li >
+                        <a href="penalty-calculator.html"><i class="fa fa-fw fa-check"></i><span>Penalty Calculator</span>
+                        </a>
+                      </li>
+                      <li >
+                        <a href="debt-consolidation-calculator.html"><i class="fa fa-fw fa-check"></i><span>Debt Consolidation Calculator</span>
+                        </a>
+                      </li>
+                      <li >
+                        <a href="mortgage-refinance-equity.html"><i class="fa fa-fw fa-check"></i><span>Maximum Equity Refinance Calculator</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+
+            </ul>
+
+
+
+
+            <div class="big-box">
+              <div id="big-box-2"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    window.ratehub = {"canonicalUrl":"\/penalty-calculator","serverUri":"https:\/\/www.ratehub.ca","requestPath":"\/penalty-calculator","pageType":"mortgages","displayVersion":2,"isWidget":false,"experiments":{"mortgages":{"mtgNonMonForm":0,"lenderComparison":0,"renewalCardRedirectStrategy":0,"purchaseLeadSubmitStrategy":0,"appCa":0},"creditcards":{"ccNonMonForm":0,"showIncomeColumn":1,"compareButton":0,"lowInterestCardFinder":1,"cardFinderCTAs":2,"ccSideNav":0},"chequing":{"chqTransactionsTest":0,"chqPFAIconTest":1},"savings":{"savingsAdditionalFeesTest":1,"savPFAIconTest":1},"gic":{"depSideNav":0,"gicPFAIconTest":1},"babe":{"lipstickOnAPig":10}},"analytics":{"ga":{"key":"UA-17477445-1"},"heap":{"key":"3993016571"},"googleTagManager":{"containerId":"GTM-MN8QRHD"},"visitorId":"1395530904595448910"},"colors":{"black":"#000000","white":"#FFFFFF","whiteTranslucent":"rgba(255, 255, 255, 0.95)","whiteTransparent":"rgba(255, 255, 255, 0)","blackberry":"black","blackberryLight":"#393939","coconut":"white","blueberry":"#00b5d6","blueberryLight":"#b2ecf7","blueberryDark":"#008299","blueberryLight50":"hsla(190, 81%, 83%, 0.5)","berry":"#00729e","berryLight":"#bbe4ef","berryDark":"#004f6e","mist":"#ecf6f8","mistLight":"#f5fafb","mistDark":"#e5eff1","yuzu":"#ffcc50","yuzuLight":"#fde4a7","yuzuDark":"#e5b747","lime":"#4ab879","limeLight":"#a7e8c2","limeDark":"#358255","tangerine":"#ff6e37","tangerineLight":"#f8a07f","tangerineDark":"#f0592f","watermelon":"#ff8f9a","watermelonLight":"#ffc7cc","watermelonDark":" #e5808a","strawberry":"#e71328","strawberryLight":"#fcf0f0","strawberryDark":"#b80f20","stone":"#c6d0d3","stoneLight":"#f7f9fa","stoneDark":"#6a787c"},"primeRate":"2.45","ads":{"tags":{"leaderboard-1":["\/57452754\/RH_ROS_728x90_Top_ATF",[728,90],"leaderboard-1"],"mobile-leaderboard-1":["\/57452754\/RH_ROS_320x50_ATF",[320,50],"mobile-leaderboard-1"],"sponsored-credit-cards":["\/57452754\/RH_FEAT_CC_1x1",[1,1],"sponsored-credit-cards"],"sponsored-mortgages":["\/57452754\/RH_FEAT_MTG_1x1",[1,1],"sponsored-mortgages"],"sponsored-gics":["\/57452754\/RH_FEAT_GIC_1x1",[1,1],"sponsored-gics"],"sponsored-savings":["\/57452754\/RH_FEAT_SAV_1x1",[1,1],"sponsored-savings"],"big-box-1":["\/57452754\/RH_ROS_300x250_ATF",[300,250],"big-box-1"],"big-box-2":["\/57452754\/RH_ROS_300x250_BTF",[[300,250],[300,600]],"big-box-2"],"big-box-content":["\/57452754\/RH_ROS_300x250_Content",[300,250],"big-box-content"],"big-box-content-2":["\/57452754\/RH_ROS_300x250_Content_2",[300,250],"big-box-content-2"],"leaderboard-content":["\/57452754\/RH_ROS_728x90_Content",[728,90],"leaderboard-content"],"leaderboard-content-2":["\/57452754\/RH_ROS_728x90_Content_2",[728,90],"leaderboard-content-2"],"mobile-leaderboard-content":["\/57452754\/RH_320x50_Content",[320,50],"mobile-leaderboard-content"],"mobile-leaderboard-content-2":["\/57452754\/RH_320x50_Content_2",[320,50],"mobile-leaderboard-content-2"],"leaderboard-2":["\/57452754\/RH_ROS_728x90_Bottom_BTF",[728,90],"leaderboard-2"],"mobile-leaderboard-2":["\/57452754\/RH_ROS_320x50_BTF",[320,50],"mobile-leaderboard-2"],"skin":["\/57452754\/RH_ROS_SKIN_1x1",[[1,1],[1000,1000]],"skin"]},"targeting":{"section":["calculators","refinancing-calculator","penalty-calculator","mortgages"]},"exclusions":["\/blog\/porting-or-transferring-your-mortgage\/","#\/blog\/5-ways-to-pay-off-your-mortgage-early\/","#\/blog\/renting-vs-buying-what-to-consider\/","blog\/review-eq-bank-savings-plus-account\/"]},"features":{"sumome":true,"zopim":false,"optimizer":true},"mapsKey":"AIzaSyBJxz04g2iWoWuUU187XrNbPoI0aJSv95g","csrf":"PxmpmNLTgUKqHFDED32YEfpREkgXuIwJGQNyRUZ5","user":{"browser":{"mobile":false},"location":{"id":4190,"name":"Toronto","slug":"toronto","status":"default","province":{"code":"ON","full_name":"Ontario","common_name":"Ontario","sort_order":5,"slug":"ontario","timezone":"America\/Toronto","principal_city":{"id":4190,"name":"Toronto","slug":"toronto","status":"default","province":[],"latitude":43.6666984558105,"longitude":-79.4167022705078}},"latitude":43.6666984558105,"longitude":-79.4167022705078},"language":"en","aff_info":null},"strings":{"messages":{"close":"Close","unknown-err-msg":"An unknown error has occurred. Please get in touch using the 'Contact Us' link at the bottom of the page.","blank-email-err-msg":"Email must not be blank.","blank-username-err-msg":"Username must not be blank.","invalid-email-err-msg":"That email address is not valid.","blank-password-err-msg":"Password must not be blank.","blank-firstname-err-msg":"First name must not be blank.","blank-lastname-err-msg":"Last name must not be blank.","user-exists-err-msg":"That email address is already registered. Please provide a different one.","alt-user-exists-err-msg":"That email address is already registered. Please login above or create a new account.","incorrect-login-err-msg":"Incorrect username or password.","incorrect-password-err-msg":"That password is incorrect.","auth-revoke-err-msg":"Unable to revoke authentication.","validation-err-msg":"Unable to validate user.","user-not-registered-msg":"That email address is not registered with us.","passwords-match-err-msg":"Those new passwords do not match.","token-retrieve-err-msg":"Unable to retrieve token.","password-reset-err-msg":"Unable to reset password.","token-validate-err-msg":"Unable to validate token.","change-email-err-msg":"Unable to change e-mail.","disable-account-err-msg":"Unable to disable account.","re-enable-account-err-msg":"Unable to re-enable account.","account-disabled":"That account has been disabled","account-not-verified":"The user's account has not been verified","domain-key-invalid":"The domain key passed to the auth service is incorrect","email-does-exist":"That email account does not exist","email-exists":"That email account exists already","exception":"An unhandled error has occured","forgot-token-invalid":"The forgot token is invalid","invalid-credentials":"The email address or password is incorrect","no-such-email":"The email address does not exist","password-mismatch":"The passwords don't match","token-invalid-or-expired":"The reset password token is invalid or has expired","user-disabled":"The user account has been disabled","user-exists":"The user already exists","passwords-space-err-msg":"Password must be minimum 8 characters, with no spaces.","alert-term-complete":"Based on the original mortgage contract date and length of term you selected, your original mortgage contract is complete. Please adjust one or both of these inputs.","calc-posted-rate-at-original-mortgage-date":"posted rate at original mortgage date","calc-prime-rate":"[calc-prime-rate]","calc-posted-rate-for-term":"[calc-posted-rate-for-term]","calc-your-mortgage-rate":"your existing mortgage rate","calc-posted-rate-for-remaining-term":"posted rate for remaining term","calc-rate-for-remaining-term":"rate for remaining term","hide-calculations":"Hide calculations","show-calculations":"Show calculations","thank-you-title":"Thank you!"}}};  </script>
+    <script type="text/javascript" src="assets/js/appde4f.js?v=2fc277b5"></script>
+    <script type="text/javascript" src="assets/js/controlscbbd.js?v=f6e434b8"></script>
+    <script type="text/javascript" src="vendor/modernizr/modernizr-custom74e9.js?v=231541f0"></script>
+    <script type="text/javascript" src="vendor/fd-slider/fd-slider74e9.js?v=231541f0"></script>
+    <script type="text/javascript" src="vendor/json2/json274e9.js?v=231541f0"></script>
+    <script type="text/javascript" src="js/mortgages74e9.js?v=231541f0"></script>
+    <script type="text/javascript" src="vendor/knockout/knockout-2.1.074e9.js?v=231541f0"></script>
+    <script type="text/javascript" src="vendor/jquery.plugins/chosen/chosen.jquery.custom74e9.js?v=231541f0"></script>
+    <script type="text/javascript" src="vendor/jstorage/jstorage74e9.js?v=231541f0"></script>
+    <script type="text/javascript" src="js/refinance_calculators7b37.js?v=55cc66c3"></script>
+    <script type="text/javascript">
+
+      jQuery('form').append('<input type="hidden" name="_token" value="PxmpmNLTgUKqHFDED32YEfpREkgXuIwJGQNyRUZ5">');
+
+      window.initSelects = function(el) {
+        var allowSearch;
+        if (el.id.indexOf("city") !== -1 || el.id.indexOf("province") !== -1) {
+          allowSearch = true;
+        } else {
+          allowSearch = false;
+        }
+
+        if (isMobileDevice()) {
+          allowSearch = false;
+        }
+
+        $(el)
+        .wrap('<span class="rh-select"></span>')
+        .select2({
+          minimumResultsForSearch: !allowSearch ? -1 : null,
+          width: "resolve",
+          attachToBody: !isWidgetView($(el))
+        });
+
+    // $(el).on('select2-opening', function(event) {
+    //  if (isMobileDevice()) {
+    //      initiateStandardMobileOptionPicking(el, event);
+    //  }
+    // });
+
+    var arrow = '<i class="fa fa-caret-down"></i>';
+    $(el).next().find(".chosen-single div").html(arrow);
+  };
+
+  jQuery(function($) {
+    // icheck
+    if (!isMobileDevice()) {
+      $('.ratehub-calc input[type="checkbox"]')
+      .wrap('<span class="rh-checkbox-container"></span>')
+      .iCheck({insert: '<i class="fa fa-square"></i><i class="fa fa-check-square"></i>'})
+      .on('ifChanged', function(event) {
+        $(this).change();
+      })
+      .on('change', function(event) {
+        $(this).iCheck('update');
+      });
+    }
+
+    // select2
+    if ($.fn.select2 && $.fn.select2.ratehub) {
+      $(".rh-calc-wrapper select").each(function() {
+        initSelects(this);
+      });
+    }
+  });
+
+  jQuery(function($) {
+    var provinceSelector = $('#province');
+    if (provinceSelector.is('.chosen'))	provinceSelector.chosen({disable_search: true});
+
+  });
+
+  rh.Control.init();
+</script>
+<div id="hidden" style="display:none;">
+  <div id="skin"></div>
+</div>
+</body>
+
+<!-- Mirrored from www.ratehub.ca/penalty-calculator by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Feb 2021 07:26:18 GMT -->
+</html>

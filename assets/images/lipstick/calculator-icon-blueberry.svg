@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62">
+  <style>.st0{fill:none;stroke:#00b5d6;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
+  </style>
+
+    <g>
+      <circle class="st0" cx="31" cy="31" r="29"/>
+      <path class="st0" d="M44.37 43.59c0 .55-.45 1-1 1H18.19c-.55 0-1-.45-1-1V18.41c0-.55.45-1 1-1h25.18c.55 0 1 .45 1 1v25.18zM33.12 25.38h5.63M33.12 34.75h5.63M33.12 38.5h5.63M22.34 25.38h5.63M25.15 22.56v5.63"/>
+
+        <path class="st0" d="M22.34 33.81l5.63 5.63M27.97 33.81l-5.63 5.63"/>
+
+    </g>
+  
+</svg>

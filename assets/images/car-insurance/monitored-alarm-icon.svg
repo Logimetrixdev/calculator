@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>monitored-alarm-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="monitored-alarm-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-2" stroke="#56ADC2" stroke-width="2" x="8" y="22" width="38" height="25" rx="3"></rect>
+        <path d="M15,21.5611285 C15.3581573,21.7991526 15.7809702,21.9285714 16.2167635,21.9285714 L39,21.9285714 L39,16.2857143 C39,9.65829729 33.627417,4.28571429 27,4.28571429 C20.372583,4.28571429 15,9.65829729 15,16.2857143 L15,21.5611285 Z" id="Rectangle-2-Copy" stroke="#56ADC2" stroke-width="2"></path>
+        <circle id="Oval-2" stroke="#56ADC2" stroke-width="2" cx="27" cy="33" r="3"></circle>
+        <rect id="Rectangle-3" fill="#56ADC2" x="26" y="36" width="2" height="6" rx="1"></rect>
+    </g>
+</svg>
